@@ -1,0 +1,39 @@
+@keyframes pulse {
+  0% {
+    opacity: 0.1;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {opacity: 0.1}
+}
+
+:local(.loader) {
+  display: inline-block;
+  position: relative;
+}
+
+:local(.circle) {
+  border-radius: 100%;
+  display: inline-block;
+  margin-right: 1px;
+  background-color: #727981;
+  width: 10px;
+  height: 10px;
+  animation: pulse 0.8s ease-in-out infinite;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+:local(.one) {
+  animation-delay: -0.3s;
+}
+
+:local(.two) {
+  animation-delay: -0.2s;
+}
+
+:local(.three) {
+  animation-delay: -0.1s;
+}

@@ -1,0 +1,57 @@
+@keyframes pulse {
+  0% {
+    height: 30%;
+    opacity: 0.5
+  }
+  25% {
+    height: 100%;
+    opacity: 1}
+  35% {
+    height: 30%;
+    opacity: 0.5;
+  }
+  50% {
+    height: 100%;
+    opacity: 1;
+  }
+  60% {
+    height: 50%;
+    opacity: 0.5;
+  }
+  75% {
+    height: 100%;
+    opacity: 1;
+  }
+  100% {
+    height: 30%;
+    opacity: 0.5;
+  }
+}
+
+:local(.loader) {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  vertical-align: bottom;
+  position: relative;
+}
+
+:local(.bar) {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  width: 3px;
+  height: 10px;
+  background: #2689E7;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+:local(.two) {
+   left: 5px;
+  animation-delay: -1s;
+}
+
+:local(.three) {
+  left: 10px;
+  animation-delay: -0.5s;
+}

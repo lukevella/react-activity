@@ -1,0 +1,53 @@
+{
+  "name": "react-activity",
+  "version": "1.0.0",
+  "description": "React component library for activity indicators",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "webpack --watch",
+    "compile:lib": "babel src --out-dir lib",
+    "build": "webpack --progress --colors",
+    "dev-watch": "webpack-dev-server --config webpack.dev.config.js",
+    "dev": "webpack --config webpack.dev.config.js",
+    "lint": "eslint ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukevella/react-activity.git"
+  },
+  "keywords": [
+    "react",
+    "activity",
+    "indicator",
+    "ajax",
+    "loader"
+  ],
+  "author": "Luke Vella <me@lukevella.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukevella/react-activity/issues"
+  },
+  "homepage": "https://github.com/lukevella/react-activity",
+  "devDependencies": {
+    "babel-core": "^6.3.13",
+    "babel-eslint": "^4.1.6",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "css-loader": "^0.23.0",
+    "eslint": "^1.10.3",
+    "eslint-plugin-react": "^3.11.3",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9"
+  },
+  "peerDependencies": {
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
+  },
+  "dependencies": {
+    "react-css-modules": "^3.6.3"
+  }
+}
