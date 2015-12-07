@@ -29,10 +29,10 @@
 }
 
 :local(.loader) {
+  text-align: left;
   display: inline-block;
-  height: 15px;
-  width: 15px;
-  vertical-align: bottom;
+  height: 1em;
+  width: 1em;
   position: relative;
 }
 
@@ -40,18 +40,18 @@
   position: absolute;
   bottom: 0;
   display: inline-block;
-  width: 3px;
-  height: 10px;
-  background: #2689E7;
+  width: 0.1875em;
+  height: 0.625em;
+  background: #727981;
   animation: pulse 1.5s ease-in-out infinite;
 }
 
 :local(.two) {
-   left: 5px;
+  left: 0.3125em;
   animation-delay: -1s;
 }
 
 :local(.three) {
-  left: 10px;
+  left: 0.625em;
   animation-delay: -0.5s;
 }

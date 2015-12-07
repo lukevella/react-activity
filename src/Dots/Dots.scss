@@ -16,10 +16,10 @@
 :local(.circle) {
   border-radius: 100%;
   display: inline-block;
-  margin-right: 1px;
+  margin-right: 0.0625em;
   background-color: #727981;
-  width: 10px;
-  height: 10px;
+  width: 0.2em;
+  height: 0.2em;
   animation: pulse 0.8s ease-in-out infinite;
   &:last-child {
     margin-right: 0;

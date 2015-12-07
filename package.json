@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "webpack --watch",
-    "compile:lib": "babel src --out-dir lib",
+    "compile:lib": "rm -Rf ./lib && babel src --out-dir lib",
     "build": "webpack --progress --colors",
     "dev-watch": "webpack-dev-server --config webpack.dev.config.js",
     "dev": "webpack --config webpack.dev.config.js",

@@ -4,7 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   devtool: 'source-map',
   entry: {
-    build: __dirname + '/components/index.js',
+    build: __dirname + '/components/index.js'
   },
   output: {
     path: __dirname + '/build/',

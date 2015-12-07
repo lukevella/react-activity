@@ -1,17 +1,26 @@
 import React from 'react';
-import CSSModules from 'react-css-modules';
+import activityIndicator from '../activityIndicator';
+import cssModules from 'react-css-modules';
 import styles from './Dots.scss';
 
-const ActivityIndicatorDots = React.createClass({
+const Dots = React.createClass({
   render() {
+    let style = {};
+    if (this.props.color) {
+      style.backgroundColor = this.props.color
+    };
     return (
       <div styleName="loader">
-        <div styleName="circle one" />
-        <div styleName="circle two" />
-        <div styleName="circle three" />
+        <div styleName="circle one" style={style} />
+        <div styleName="circle two" style={style} />
+        <div styleName="circle three" style={style} />
       </div>
     );
   }
 });
 
-export default CSSModules(ActivityIndicatorDots, styles, {allowMultiple: true});
+export default activityIndicator(cssModules(Dots, styles, {
+  allowMultiple: true
+}), {
+  size: 40
+});

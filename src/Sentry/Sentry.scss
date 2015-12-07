@@ -16,10 +16,11 @@
   }
 }
 :local(.loader-container) {
+  text-align: left;
   display: inline-block;
   position: relative;
-  width: 30px;
-  height: 30px;
+  width: 1em;
+  height: 1em;
 }
 :local(.loader) {
   display: inline-flex;
@@ -32,11 +33,11 @@
 
 :local(.circle) {
   display: inline-block;
-  border: 2px solid #2689E7;
+  border: 2px solid #727981;
   border-radius: 100%;
   animation: pulse 0.8s linear infinite;
 }
 
-:local(.delay) {
-  animation-delay: -0.3s;
+:local(.two) {
+  animation-delay: -0.4s;
 }

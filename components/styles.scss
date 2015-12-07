@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 80px 0;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+:global .app-container {
+  margin: 80px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+:global .indicators {
+  .indicator {
+    display: inline-block;
+    margin: 40px;
+    .label {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+}
