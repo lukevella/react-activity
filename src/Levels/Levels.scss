@@ -1,4 +1,4 @@
-@keyframes pulse {
+@keyframes levels-pulse {
   0% {
     height: 30%;
     opacity: 0.5
@@ -28,30 +28,30 @@
   }
 }
 
-:local(.loader) {
+.rai-levels {
   text-align: left;
-  display: inline-block;
+  display: inline-flex;
+  align-items: flex-end;
   height: 1em;
-  width: 1em;
-  position: relative;
 }
 
-:local(.bar) {
-  position: absolute;
+.rai-bar {
   bottom: 0;
   display: inline-block;
-  width: 0.1875em;
-  height: 0.625em;
+  width: 0.2em;
   background: #727981;
-  animation: pulse 1.5s ease-in-out infinite;
-}
-
-:local(.two) {
-  left: 0.3125em;
-  animation-delay: -1s;
-}
-
-:local(.three) {
-  left: 0.625em;
-  animation-delay: -0.5s;
+  margin-right: 0.1em;
+  animation-name: levels-pulse;
+  animation-duration: inherit;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  &.two {
+    animation-delay: -1s;
+  }
+  &.three {
+    animation-delay: -0.5s;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
 }

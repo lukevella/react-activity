@@ -1,13 +1,13 @@
-var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var path = require('path');
 
 module.exports = {
   devtool: 'source-map',
   entry: {
-    build: __dirname + '/components/index.js'
+    build: path.resolve('components/index.js')
   },
   output: {
-    path: __dirname + '/build/',
+    path: path.resolve('build'),
     filename: '[name].js',
     publicPath: 'build'
   },
@@ -23,19 +23,18 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css?modules&sourceMap!sass')
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!sass')
       }
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin('[name].css', {
+    new ExtractTextPlugin('style.css', {
       allChunks: true
     })
   ],
   devServer: {
     colors: true,
-    contentBase: __dirname,
+    contentBase: path.resolve(__dirname),
     historyApiFallback: true,
     hot: true,
     inline: true,

@@ -1,30 +1,31 @@
 'use strict';
 import React from 'react';
-import cssModules from 'react-css-modules';
-import activityIndicator from '../activityIndicator';
-import styles from './Sentry.scss';
+import ActivityIndicator from '../ActivityIndicator/ActivityIndicator';
+import './Sentry.scss';
 
 const Sentry = React.createClass({
+  getDefaultProps() {
+    return {
+      animationDuration: 0.8,
+      size: 30
+    };
+  },
   render() {
     let style = {};
     if (this.props.color) {
       style.borderColor = this.props.color
     };
     return (
-      <div styleName="loader-container">
-        <div styleName="loader">
-          <div styleName="circle" style={style} />
+      <ActivityIndicator className="rai-sentry" {...this.props}>
+        <div className="rai-wave-container">
+          <div className="rai-wave" style={style} />
         </div>
-        <div styleName="loader">
-          <div styleName="circle two" style={style} />
+        <div className="rai-wave-container">
+          <div className="rai-wave two" style={style} />
         </div>
-      </div>
+      </ActivityIndicator>
     );
   }
 });
 
-export default activityIndicator(cssModules(Sentry, styles, {
-  allowMultiple: true
-}), {
-  size: 24
-});
+export default Sentry;

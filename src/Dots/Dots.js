@@ -1,26 +1,27 @@
 import React from 'react';
-import activityIndicator from '../activityIndicator';
-import cssModules from 'react-css-modules';
-import styles from './Dots.scss';
+import ActivityIndicator from '../ActivityIndicator/ActivityIndicator';
+import './Dots.scss';
 
 const Dots = React.createClass({
+  getDefaultProps() {
+    return {
+      animationDuration: 0.8,
+      size: 40
+    };
+  },
   render() {
     let style = {};
     if (this.props.color) {
       style.backgroundColor = this.props.color
     };
     return (
-      <div styleName="loader">
-        <div styleName="circle one" style={style} />
-        <div styleName="circle two" style={style} />
-        <div styleName="circle three" style={style} />
-      </div>
+      <ActivityIndicator className="rai-dots" {...this.props}>
+        <div className="rai-circle one" style={style} />
+        <div className="rai-circle two" style={style} />
+        <div className="rai-circle three" style={style} />
+      </ActivityIndicator>
     );
   }
 });
 
-export default activityIndicator(cssModules(Dots, styles, {
-  allowMultiple: true
-}), {
-  size: 40
-});
+export default Dots;

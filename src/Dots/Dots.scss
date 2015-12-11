@@ -1,4 +1,4 @@
-@keyframes pulse {
+@keyframes dots-pulse {
   0% {
     opacity: 0.1;
   }
@@ -7,33 +7,32 @@
   }
   100% {opacity: 0.1}
 }
-
-:local(.loader) {
+.rai-dots {
   display: inline-block;
   position: relative;
+  animation-duration: inherit;
 }
-
-:local(.circle) {
+.rai-circle {
   border-radius: 100%;
   display: inline-block;
   margin-right: 0.0625em;
   background-color: #727981;
   width: 0.2em;
   height: 0.2em;
-  animation: pulse 0.8s ease-in-out infinite;
+  animation-name: dots-pulse;
+  animation-duration: inherit;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  &.one {
+    animation-delay: -0.3s;
+  }
+  &.two {
+    animation-delay: -0.2s;
+  }
+  &.three {
+    animation-delay: -0.1s;
+  }
   &:last-child {
     margin-right: 0;
   }
-}
-
-:local(.one) {
-  animation-delay: -0.3s;
-}
-
-:local(.two) {
-  animation-delay: -0.2s;
-}
-
-:local(.three) {
-  animation-delay: -0.1s;
 }

@@ -4,11 +4,9 @@
   "description": "React component library for activity indicators",
   "main": "lib/index.js",
   "scripts": {
-    "start": "webpack --watch",
+    "start": "webpack-dev-server --config webpack.dev.config.js --hot --inline",
     "compile:lib": "rm -Rf ./lib && babel src --out-dir lib",
-    "build": "webpack --progress --colors",
-    "dev-watch": "webpack-dev-server --config webpack.dev.config.js",
-    "dev": "webpack --config webpack.dev.config.js",
+    "build": "webpack --config webpack.dev.config.js --progress --colors",
     "lint": "eslint ./src"
   },
   "repository": {
@@ -47,7 +45,5 @@
     "react": "^0.14.3",
     "react-dom": "^0.14.3"
   },
-  "dependencies": {
-    "react-css-modules": "^3.6.3"
-  }
+  "dependencies": {}
 }

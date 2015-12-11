@@ -4,12 +4,14 @@ import styles from './activityIndicator.scss';
 
 export default (ComposedComponent, defaultProps) => {
   const ActivityIndicator = React.createClass({
+    displayName: ComposedComponent.displayName,
     propTypes: {
       size: PropTypes.number,
-      color: PropTypes.string
+      color: PropTypes.string,
+      speed: PropTypes.number
     },
     getDefaultProps() {
-      return defaultProps || {};
+      return defaultProps;
     },
     render() {
       const style = {};
@@ -18,6 +20,9 @@ export default (ComposedComponent, defaultProps) => {
         // outer container. Since all the measurements are in ems the component
         // scales accordingly.
         style.fontSize = this.props.size;
+      }
+      if (this.props.speed) {
+        style.animationDuration = (defaultProps.animationDuration || 0.8) * (1 / this.props.speed) + 's';
       }
       return (
         <div className={styles.activityIndicator} style={style}>

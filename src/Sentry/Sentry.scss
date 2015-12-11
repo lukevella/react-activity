@@ -1,4 +1,4 @@
-@keyframes pulse {
+@keyframes sentry-pulse {
   0% {
     width: 0;
     height: 0;
@@ -15,29 +15,33 @@
     opacity: 0;
   }
 }
-:local(.loader-container) {
+.rai-sentry {
   text-align: left;
   display: inline-block;
   position: relative;
   width: 1em;
   height: 1em;
 }
-:local(.loader) {
+
+.rai-wave-container {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   position: absolute;
+  animation-duration: inherit;
 }
 
-:local(.circle) {
+.rai-wave {
   display: inline-block;
   border: 2px solid #727981;
   border-radius: 100%;
-  animation: pulse 0.8s linear infinite;
-}
-
-:local(.two) {
-  animation-delay: -0.4s;
+  animation-name: sentry-pulse;
+  animation-duration: inherit;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  &.two {
+    animation-delay: -0.4s;
+  }
 }
