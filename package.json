@@ -5,13 +5,14 @@
   "main": "./dist/react-activity.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.config.js --hot --inline",
-    "compile:lib": "rm -Rf ./lib && babel src --out-dir lib && sass --update src:lib --sourcemap=none",
-    "build": "webpack --config webpack.config.js --progress --colors && sass --update -f src/styles.scss:dist/react-activity.css --sourcemap=none",
+    "compile:lib": "rm -Rf ./lib && babel src --out-dir lib && sass --update src:lib --sourcemap=none && git add lib",
+    "build": "webpack --config webpack.config.js --progress --colors && sass --update -f src/styles.scss:dist/react-activity.css --sourcemap=none && git add dist",
     "lint": "eslint ./src"
   },
-  "prepush": {
-    "tasks": ["npm run compile:lib", "npm run build"]
-  },
+  "pre-commit": [
+    "compile:lib",
+    "build"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/lukevella/react-activity.git"
@@ -40,7 +41,7 @@
     "eslint-plugin-react": "^3.11.3",
     "extract-text-webpack-plugin": "^0.9.1",
     "node-sass": "^3.4.2",
-    "precommit": "^1.1.9",
+    "pre-commit": "^1.1.2",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.9",
