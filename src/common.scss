@@ -1,0 +1,7 @@
+$rai-default-clr: #727981;
+
+@mixin rai-activity-indicator($defaultFontSize: 16) {
+  display: inline-block;
+  font-size: ($defaultFontSize / 16) * 1em;
+  line-height: 0;
+}

@@ -1,31 +1,20 @@
 'use strict';
 import React from 'react';
-import ActivityIndicator from '../ActivityIndicator/ActivityIndicator';
-import './Sentry.scss';
+import activityIndicator from '../activityIndicator';
 
 const Sentry = React.createClass({
-  getDefaultProps() {
-    return {
-      animationDuration: 0.8,
-      size: 30
-    };
-  },
   render() {
-    let style = {};
-    if (this.props.color) {
-      style.borderColor = this.props.color
-    };
     return (
-      <ActivityIndicator className="rai-sentry" {...this.props}>
+      <div className="rai-sentry" {...this.props}>
         <div className="rai-wave-container">
-          <div className="rai-wave" style={style} />
+          <div className="rai-wave" style={this.props.getBorderStyle(0)} />
         </div>
         <div className="rai-wave-container">
-          <div className="rai-wave two" style={style} />
+          <div className="rai-wave" style={this.props.getBorderStyle(0.4)} />
         </div>
-      </ActivityIndicator>
+      </div>
     );
   }
 });
 
-export default Sentry;
+export default activityIndicator(Sentry, 0.8);

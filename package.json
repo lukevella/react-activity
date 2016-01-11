@@ -1,13 +1,16 @@
 {
   "name": "react-activity",
-  "version": "1.0.0",
-  "description": "React component library for activity indicators",
-  "main": "lib/index.js",
+  "version": "1.0.6",
+  "description": "Activity indicator component library for React applications.",
+  "main": "./dist/react-activity.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.config.js --hot --inline",
-    "compile:lib": "rm -Rf ./lib && babel src --out-dir lib",
-    "build": "webpack --config webpack.dev.config.js --progress --colors",
+    "compile:lib": "rm -Rf ./lib && babel src --out-dir lib && sass --update src:lib --sourcemap=none",
+    "build": "webpack --config webpack.config.js --progress --colors && sass --update -f src/styles.scss:dist/react-activity.css --sourcemap=none",
     "lint": "eslint ./src"
+  },
+  "prepush": {
+    "tasks": ["npm run compile:lib", "npm run build"]
   },
   "repository": {
     "type": "git",
@@ -37,9 +40,11 @@
     "eslint-plugin-react": "^3.11.3",
     "extract-text-webpack-plugin": "^0.9.1",
     "node-sass": "^3.4.2",
+    "precommit": "^1.1.9",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.9"
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   },
   "peerDependencies": {
     "react": "^0.14.3",

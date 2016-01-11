@@ -1,3 +1,5 @@
+@import "../common";
+
 @keyframes dots-pulse {
   0% {
     opacity: 0.1;
@@ -8,17 +10,16 @@
   100% {opacity: 0.1}
 }
 .rai-dots {
-  display: inline-block;
-  position: relative;
-  animation-duration: inherit;
+  @include rai-activity-indicator;
 }
+
 .rai-circle {
   border-radius: 100%;
   display: inline-block;
-  margin-right: 0.0625em;
-  background-color: #727981;
-  width: 0.2em;
-  height: 0.2em;
+  margin-right: 0.125em;
+  background-color: $rai-default-clr;
+  width: 0.5em;
+  height: 0.5em;
   animation-name: dots-pulse;
   animation-duration: inherit;
   animation-timing-function: ease-in-out;

@@ -1,25 +1,15 @@
 import React from 'react';
 import activityIndicator from '../activityIndicator';
-import './Spinner.scss';
-
-const defaultProps = {
-  animationDuration: 0.8
-};
 
 const Spinner = React.createClass({
-  getDefaultProps() {
-    return defaultProps;
-  },
   render() {
-    let style = {};
-    if (this.props.color) {
-      style.borderColor = this.props.color
-    };
     return (
-      <div className="rai-spinner" style={style}>
+      <div className="rai-spinner" {...this.props}>
+        <div className="rai-spinner-outer" style={this.props.getBorderStyle()} />
+        <div className="rai-spinner-inner" style={this.props.getBorderStyle()} />
       </div>
     );
   }
 });
 
-export default activityIndicator(Spinner, defaultProps);
+export default activityIndicator(Spinner, 0.6);

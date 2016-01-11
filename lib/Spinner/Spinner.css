@@ -1,18 +1,17 @@
-@import "../common";
-
 @keyframes rai-spinner {
-  from {transform: rotate(0deg)}
-  to {transform: rotate(360deg)}
-}
-
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 .rai-spinner {
-  @include rai-activity-indicator;
+  display: inline-block;
+  font-size: 1em;
+  line-height: 0;
   width: 1em;
   height: 1em;
   position: relative;
-  margin: 0;
-  &-inner,
-  &-outer {
+  margin: 0; }
+  .rai-spinner-inner, .rai-spinner-outer {
     position: absolute;
     top: 0;
     left: 0;
@@ -20,26 +19,22 @@
     height: 100%;
     border-radius: 100%;
     margin-left: -0.1em;
-    margin-top: -0.1em;
-  }
-  &-outer {
-    border: 0.125em solid $rai-default-clr;
-    opacity: 0.2;
-  }
-  &-inner {
+    margin-top: -0.1em; }
+  .rai-spinner-outer {
+    border: 0.125em solid #727981;
+    opacity: 0.2; }
+  .rai-spinner-inner {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    border-top: 0.125em solid $rai-default-clr;
+    border-top: 0.125em solid #727981;
     border-right: 0.125em solid transparent !important;
     border-bottom: 0.125em solid transparent !important;
     border-left: 0.125em solid transparent !important;
     animation-name: rai-spinner;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-duration: inherit;
-  }
-}
+    animation-duration: inherit; }

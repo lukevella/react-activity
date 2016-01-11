@@ -1,8 +1,10 @@
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: 'dist',
-    filename: 'react-activity.js'
+    path: './dist',
+    filename: 'react-activity.js',
+    library: 'ReactActivity',
+    libraryTarget: 'umd'
   },
   externals: [
     {
@@ -31,7 +33,10 @@ module.exports = {
         query: {
           presets: ['react', 'es2015']
         }
+      }, {
+        test: /\.scss$/,
+        loader: 'raw'
       }
     ]
-  },
+  }
 }
