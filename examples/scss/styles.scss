@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+@import "./common";
+@import "../../src/styles.scss";
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+  color: #4A4A4A;
+}
+
+b {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 20px;
+  color: $blue-clr;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+pre {
+  display: block;
+  background: #F2F3F4;
+  font-family: 'Droid Sans Mono', monospace;
+  font-size: 14px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  white-space: pre;
+  color: #7B8085;
+  line-height: 1.5em;
+  tab-size: 2;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.app-container {
+  margin: 80px auto;
+  padding: 0 40px;
+  max-width: 880px;
+}

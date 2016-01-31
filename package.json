@@ -4,9 +4,9 @@
   "description": "Activity indicator component library for React applications.",
   "main": "./dist/react-activity.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.config.js --hot --inline",
+    "start": "webpack-dev-server --config examples/webpack.config.js --hot --inline",
     "compile:lib": "rm -Rf ./lib && babel src --out-dir lib && sass --update src:lib --sourcemap=none && git add lib",
-    "build": "webpack --config webpack.config.js --progress --colors && sass --update -f src/styles.scss:dist/react-activity.css --sourcemap=none && git add dist",
+    "build": "webpack --progress --colors && sass --update -f src/styles.scss:dist/react-activity.css --sourcemap=none && git add dist",
     "lint": "eslint ./src"
   },
   "pre-commit": [

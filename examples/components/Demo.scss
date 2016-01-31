@@ -1,0 +1,81 @@
+@import "../scss/common";
+
+.indicators {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px 0;
+  margin-left: -10px;
+  .indicator {
+    display: flex;
+    flex-basis: 180px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    text-align: center;
+    border: 1px solid #EEE;
+    height: 120px;
+    margin: 10px;
+    border-radius: 3px;
+    position: relative;
+    padding-bottom: 20px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    &.active {
+      width: 100%;
+    }
+    &.active,
+    &:hover {
+      border-color: $blue-clr;
+      .label {
+        color: $blue-clr;
+        border-color: $blue-clr;
+      }
+    }
+    .label {
+      transition: all 0.2s linear;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      border-top: 1px solid #EEE;
+      font-size: 12px;
+      color: #AAA;
+      padding: 10px 0;
+      text-align: center;
+    }
+    @include media($mobile-breakpoint) {
+      display: block;
+    }
+  }
+}
+
+.demo-container {
+  display: flex;
+}
+.demo-options {
+  margin-right: 20px;
+  min-width: 180px;
+}
+.demo-option {
+  margin-bottom: 10px;
+  & > label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #AAA;
+    display: block;
+    &::after {
+      content: ':'
+    }
+  }
+  & > input {
+    display: block;
+    border-radius: 3px;
+    padding: 5px;
+    outline: 0;
+    border: 1px solid #DDD;
+  }
+}
+.demo-output {
+  flex-grow: 1;
+}

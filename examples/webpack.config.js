@@ -4,7 +4,7 @@ var path = require('path');
 module.exports = {
   devtool: 'source-map',
   entry: {
-    build: path.resolve('src/index.js')
+    app: path.resolve('examples/components/index.js')
   },
   output: {
     path: path.resolve('build'),
