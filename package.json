@@ -7,7 +7,8 @@
     "start": "webpack-dev-server --config examples/webpack.config.js --hot --inline",
     "compile:lib": "rm -Rf ./lib && babel src --out-dir lib && sass --update src:lib --sourcemap=none && git add lib",
     "build": "webpack --progress --colors && sass --update -f src/styles.scss:dist/react-activity.css --sourcemap=none && git add dist",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "build:examples": "NODE_ENV=production webpack --config examples/webpack.config.js"
   },
   "pre-commit": [
     "compile:lib",
@@ -40,6 +41,7 @@
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.11.3",
     "extract-text-webpack-plugin": "^0.9.1",
+    "html-webpack-plugin": "^2.7.2",
     "node-sass": "^3.4.2",
     "pre-commit": "^1.1.2",
     "sass-loader": "^3.1.2",
