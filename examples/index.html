@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-    <link href="/examples/build/style.css" rel="stylesheet">
+    <link href="<%= htmlWebpackPlugin.files.css %>" rel="stylesheet">
     <title>React Activity Indicators</title>
   </head>
   <body>
     <div id="app">
 
     </div>
-    <script src="/examples/build/app.js"></script>
+
+    <script src="<%= htmlWebpackPlugin.files.js %>"></script>
   </body>
 </html>

@@ -33,14 +33,14 @@ var config = {
       allChunks: true
     }),
     new HtmlPlugin({
-      filename: '../../index.html',
+      filename: 'index.html',
       template: path.resolve('examples/index.html'),
       inject: false
     })
   ],
   devServer: {
     colors: true,
-    contentBase: path.resolve(__dirname + '/..'),
+    contentBase: path.resolve(__dirname),
     historyApiFallback: true,
     hot: true,
     inline: true,
