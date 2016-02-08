@@ -46,12 +46,16 @@ export default React.createClass({
     return (
       <div className="demo">
         <h2>Demo</h2>
-        <p>The library comes with <b>{count}</b> indicators to choose from </p>
+        <p>The library comes with <b>{count}</b> indicators to choose from:</p>
         <div className="indicators">
           {indicators.map((Indicator, i) => {
+            let selectedState = 'unselected';
+            if (Indicator.displayName === SelectedIndicator.displayName) {
+              selectedState = 'selected';
+            }
             return (
-              <div className="indicator" key={i} onClick={this.selectIndicator.bind(this, Indicator)}>
-                <Indicator />
+              <div className={`indicator ${selectedState}`} key={i} onClick={this.selectIndicator.bind(this, Indicator)}>
+                <Indicator color="#FFF" size={28} />
                 <div className="label">{Indicator.displayName}</div>
               </div>
             )
