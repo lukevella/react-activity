@@ -1,5 +1,4 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var HtmlPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
 var path = require('path');
 
@@ -31,16 +30,11 @@ var config = {
   plugins: [
     new ExtractTextPlugin('style.css', {
       allChunks: true
-    }),
-    new HtmlPlugin({
-      filename: 'index.html',
-      template: path.resolve('examples/index.html'),
-      inject: false
     })
   ],
   devServer: {
     colors: true,
-    contentBase: path.resolve(__dirname),
+    contentBase: path.resolve(__dirname + '/../'),
     historyApiFallback: true,
     hot: true,
     inline: true,
