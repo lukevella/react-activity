@@ -93,10 +93,10 @@ render(<App />, document.getElementById('app-container'))
 
 ## Properties
 
-* `size: number (Default: 32)` All dimensions of the activity indicators are
+* `size: number` All dimensions of the activity indicators are
 specified in ems so play around with a value until you find something that
 suits your needs.
-* `color: string (Default: '#727981')` The active color of the indicator.
+* `color: string` The active color of the indicator.
 * `speed: number (Default: 1)` The relative animation speed of the indicator.
 
 
