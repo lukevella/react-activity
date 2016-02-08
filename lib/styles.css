@@ -9,26 +9,25 @@
   display: inline-block;
   font-size: 1em;
   line-height: 0; }
-
-.rai-circle {
-  border-radius: 100%;
-  display: inline-block;
-  margin-right: 0.125em;
-  background-color: #727981;
-  width: 0.5em;
-  height: 0.5em;
-  animation-name: dots-pulse;
-  animation-duration: inherit;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite; }
-  .rai-circle.one {
-    animation-delay: -0.3s; }
-  .rai-circle.two {
-    animation-delay: -0.2s; }
-  .rai-circle.three {
-    animation-delay: -0.1s; }
-  .rai-circle:last-child {
-    margin-right: 0; }
+  .rai-dots .rai-circle {
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 0.125em;
+    background-color: #727981;
+    width: 0.5em;
+    height: 0.5em;
+    animation-name: dots-pulse;
+    animation-duration: inherit;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; }
+    .rai-dots .rai-circle.one {
+      animation-delay: -0.3s; }
+    .rai-dots .rai-circle.two {
+      animation-delay: -0.2s; }
+    .rai-dots .rai-circle.three {
+      animation-delay: -0.1s; }
+    .rai-dots .rai-circle:last-child {
+      margin-right: 0; }
 
 @keyframes levels-pulse {
   0% {
@@ -56,28 +55,26 @@
   display: inline-block;
   font-size: 1em;
   line-height: 0; }
-
-.rai-levels-container {
-  text-align: left;
-  display: inline-block;
-  height: 1em;
-  line-height: 1em;
-  animation-duration: inherit; }
-
-.rai-bar {
-  bottom: 0;
-  display: inline-block;
-  vertical-align: bottom;
-  width: 0.1875em;
-  background: #727981;
-  margin-right: 0.125em;
-  height: 50%;
-  animation-name: levels-pulse;
-  animation-duration: inherit;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite; }
-  .rai-bar:last-child {
-    margin-right: 0; }
+  .rai-levels .rai-levels-container {
+    text-align: left;
+    display: inline-block;
+    height: 1em;
+    line-height: 1em;
+    animation-duration: inherit; }
+  .rai-levels .rai-bar {
+    bottom: 0;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 0.1875em;
+    background: #727981;
+    margin-right: 0.125em;
+    height: 50%;
+    animation-name: levels-pulse;
+    animation-duration: inherit;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; }
+    .rai-levels .rai-bar:last-child {
+      margin-right: 0; }
 
 @keyframes rai-sentry-pulse {
   from {
@@ -97,27 +94,25 @@
   position: relative;
   width: 1.5em;
   height: 1.5em; }
-
-.rai-wave-container {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  animation-duration: inherit; }
-
-.rai-wave {
-  display: inline-block;
-  border: 0.0625em solid #727981;
-  border-radius: 100%;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  animation-name: rai-sentry-pulse;
-  animation-duration: inherit;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite; }
+  .rai-sentry .rai-wave-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation-duration: inherit; }
+  .rai-sentry .rai-wave {
+    display: inline-block;
+    border: 0.0625em solid #727981;
+    border-radius: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    animation-name: rai-sentry-pulse;
+    animation-duration: inherit;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; }
 
 @keyframes rai-spinner {
   from {

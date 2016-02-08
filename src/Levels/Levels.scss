@@ -32,29 +32,27 @@
 
 .rai-levels {
   @include rai-activity-indicator;
-}
-
-.rai-levels-container {
-  text-align: left;
-  display: inline-block;
-  height: 1em;
-  line-height: 1em;
-  animation-duration: inherit;
-}
-
-.rai-bar {
-  bottom: 0;
-  display: inline-block;
-  vertical-align: bottom;
-  width: 0.1875em;
-  background: $rai-default-clr;
-  margin-right: 0.125em;
-  height: 50%;
-  animation-name: levels-pulse;
-  animation-duration: inherit;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  &:last-child {
-    margin-right: 0;
+  .rai-levels-container {
+    text-align: left;
+    display: inline-block;
+    height: 1em;
+    line-height: 1em;
+    animation-duration: inherit;
+  }
+  .rai-bar {
+    bottom: 0;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 0.1875em;
+    background: $rai-default-clr;
+    margin-right: 0.125em;
+    height: 50%;
+    animation-name: levels-pulse;
+    animation-duration: inherit;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
