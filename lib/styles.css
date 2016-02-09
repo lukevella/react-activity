@@ -160,3 +160,34 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: inherit; }
+
+.rai-activity-indicator {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 0; }
+
+@keyframes dots-pulse {
+  0% {
+    opacity: 0.1; }
+  15% {
+    opacity: 1; }
+  100% {
+    opacity: 0.1; } }
+.rai-squares .rai-square {
+  display: inline-block;
+  margin-right: 0.125em;
+  background-color: #727981;
+  width: 0.5em;
+  height: 0.5em;
+  animation-name: dots-pulse;
+  animation-duration: inherit;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
+  .rai-squares .rai-square.one {
+    animation-delay: -0.3s; }
+  .rai-squares .rai-square.two {
+    animation-delay: -0.2s; }
+  .rai-squares .rai-square.three {
+    animation-delay: -0.1s; }
+  .rai-squares .rai-square:last-child {
+    margin-right: 0; }

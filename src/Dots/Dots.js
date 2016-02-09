@@ -22,4 +22,4 @@ const Dots = React.createClass({
   }
 });
 
-export default activityIndicator(Dots, 0.8, 40);
+export default activityIndicator(Dots, 0.8);

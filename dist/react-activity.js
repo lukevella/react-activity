@@ -7,7 +7,7 @@
 		exports["ReactActivity"] = factory(require("react"));
 	else
 		root["ReactActivity"] = factory(root["React"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_3__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -59,33 +59,51 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.Spinner = exports.Sentry = exports.Levels = exports.Dots = undefined;
 
 	var _Dots = __webpack_require__(1);
 
 	var _Dots2 = _interopRequireDefault(_Dots);
 
-	var _Levels = __webpack_require__(4);
+	var _Levels = __webpack_require__(5);
 
 	var _Levels2 = _interopRequireDefault(_Levels);
 
-	var _Sentry = __webpack_require__(5);
+	var _Sentry = __webpack_require__(7);
 
 	var _Sentry2 = _interopRequireDefault(_Sentry);
 
-	var _Spinner = __webpack_require__(6);
+	var _Spinner = __webpack_require__(9);
 
 	var _Spinner2 = _interopRequireDefault(_Spinner);
 
+	var _Squares = __webpack_require__(11);
+
+	var _Squares2 = _interopRequireDefault(_Squares);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	exports.Dots = _Dots2.default;
-	exports.Levels = _Levels2.default;
-	exports.Sentry = _Sentry2.default;
-	exports.Spinner = _Spinner2.default;
+	exports.default = { Dots: _Dots2.default, Levels: _Levels2.default, Sentry: _Sentry2.default, Spinner: _Spinner2.default, Squares: _Squares2.default };
 
 /***/ },
 /* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Dots = __webpack_require__(2);
+
+	var _Dots2 = _interopRequireDefault(_Dots);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _Dots2.default;
+
+/***/ },
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -96,11 +114,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _react = __webpack_require__(2);
+	var _react = __webpack_require__(3);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _activityIndicator = __webpack_require__(3);
+	var _activityIndicator = __webpack_require__(4);
 
 	var _activityIndicator2 = _interopRequireDefault(_activityIndicator);
 
@@ -128,16 +146,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	});
 
-	exports.default = (0, _activityIndicator2.default)(Dots, 0.8, 40);
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
+	exports.default = (0, _activityIndicator2.default)(Dots, 0.8);
 
 /***/ },
 /* 3 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
+
+/***/ },
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -148,7 +166,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _react = __webpack_require__(2);
+	var _react = __webpack_require__(3);
 
 	var _react2 = _interopRequireDefault(_react);
 
@@ -210,7 +228,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 4 */
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Levels = __webpack_require__(6);
+
+	var _Levels2 = _interopRequireDefault(_Levels);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _Levels2.default;
+
+/***/ },
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -221,11 +257,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _react = __webpack_require__(2);
+	var _react = __webpack_require__(3);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _activityIndicator = __webpack_require__(3);
+	var _activityIndicator = __webpack_require__(4);
 
 	var _activityIndicator2 = _interopRequireDefault(_activityIndicator);
 
@@ -251,7 +287,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = (0, _activityIndicator2.default)(Levels, 1.5);
 
 /***/ },
-/* 5 */
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Sentry = __webpack_require__(8);
+
+	var _Sentry2 = _interopRequireDefault(_Sentry);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _Sentry2.default;
+
+/***/ },
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -262,11 +316,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _react = __webpack_require__(2);
+	var _react = __webpack_require__(3);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _activityIndicator = __webpack_require__(3);
+	var _activityIndicator = __webpack_require__(4);
 
 	var _activityIndicator2 = _interopRequireDefault(_activityIndicator);
 
@@ -295,7 +349,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = (0, _activityIndicator2.default)(Sentry, 0.8);
 
 /***/ },
-/* 6 */
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Spinner = __webpack_require__(10);
+
+	var _Spinner2 = _interopRequireDefault(_Spinner);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _Spinner2.default;
+
+/***/ },
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -306,11 +378,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _react = __webpack_require__(2);
+	var _react = __webpack_require__(3);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _activityIndicator = __webpack_require__(3);
+	var _activityIndicator = __webpack_require__(4);
 
 	var _activityIndicator2 = _interopRequireDefault(_activityIndicator);
 
@@ -329,6 +401,76 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 
 	exports.default = (0, _activityIndicator2.default)(Spinner, 0.6);
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Squares = __webpack_require__(12);
+
+	var _Squares2 = _interopRequireDefault(_Squares);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _Squares2.default;
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(3);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _activityIndicator = __webpack_require__(4);
+
+	var _activityIndicator2 = _interopRequireDefault(_activityIndicator);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Squares = _react2.default.createClass({
+	  displayName: 'Squares',
+
+	  propTypes: {
+	    squareCount: _react.PropTypes.number.isRequired
+	  },
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      squareCount: 3
+	    };
+	  },
+	  render: function render() {
+	    var squares = [];
+	    for (var i = 1; i <= this.props.squareCount; i++) {
+	      squares.unshift(_react2.default.createElement('div', {
+	        key: i,
+	        className: 'rai-square',
+	        style: this.props.getFillStyle(i / 10)
+	      }));
+	    }
+	    return _react2.default.createElement(
+	      'div',
+	      _extends({}, this.props, { className: 'rai-squares' }),
+	      squares
+	    );
+	  }
+	});
+
+	exports.default = (0, _activityIndicator2.default)(Squares, 0.8);
 
 /***/ }
 /******/ ])
