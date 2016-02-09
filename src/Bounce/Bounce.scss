@@ -1,0 +1,32 @@
+@import "../common";
+
+@keyframes bounce-pulse {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(em(-6));
+  }
+  60% {
+    transform: translateY(0);
+  }
+
+}
+
+.rai-bounce {
+  & > div {
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: em(3);
+    background-color: $rai-default-clr;
+    width: em(8);
+    height: em(8);
+    animation-name: bounce-pulse;
+    animation-duration: inherit;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

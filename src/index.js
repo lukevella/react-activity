@@ -4,5 +4,6 @@ import Sentry from './Sentry';
 import Spinner from './Spinner';
 import Squares from './Squares';
 import Digital from './Digital';
+import Bounce from './Bounce';
 
-export default {Dots, Levels, Sentry, Spinner, Squares, Digital};
+export default {Dots, Levels, Sentry, Spinner, Squares, Digital, Bounce};
