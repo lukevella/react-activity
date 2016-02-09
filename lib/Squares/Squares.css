@@ -20,11 +20,5 @@
   animation-duration: inherit;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite; }
-  .rai-squares .rai-square.one {
-    animation-delay: -0.3s; }
-  .rai-squares .rai-square.two {
-    animation-delay: -0.2s; }
-  .rai-squares .rai-square.three {
-    animation-delay: -0.1s; }
   .rai-squares .rai-square:last-child {
     margin-right: 0; }

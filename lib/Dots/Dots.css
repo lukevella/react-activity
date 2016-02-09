@@ -21,11 +21,5 @@
   animation-duration: inherit;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite; }
-  .rai-dots .rai-circle.one {
-    animation-delay: -0.3s; }
-  .rai-dots .rai-circle.two {
-    animation-delay: -0.2s; }
-  .rai-dots .rai-circle.three {
-    animation-delay: -0.1s; }
   .rai-dots .rai-circle:last-child {
     margin-right: 0; }

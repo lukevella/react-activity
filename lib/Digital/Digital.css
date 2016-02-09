@@ -21,11 +21,5 @@
     animation-duration: inherit;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite; }
-    .rai-digital > div.one {
-      animation-delay: -0.3s; }
-    .rai-digital > div.two {
-      animation-delay: -0.2s; }
-    .rai-digital > div.three {
-      animation-delay: -0.1s; }
     .rai-digital > div:last-child {
       margin-right: 0; }
