@@ -1,6 +1,6 @@
 'use strict';
 import React from 'react';
-import {Dots, Levels, Sentry, Spinner} from '../../src';
+import Indicators from '../../src';
 import './Demo.scss';
 
 export default React.createClass({
@@ -12,9 +12,7 @@ export default React.createClass({
     };
   },
   getInitialState() {
-    return {
-      selectedIndicator: Dots
-    };
+    return {};
   },
   selectIndicator(Indicator) {
     this.setState({
@@ -37,9 +35,9 @@ export default React.createClass({
     });
   },
   render() {
-    const indicators = [Dots, Levels, Sentry, Spinner];
-    const count = indicators.length;
-    const SelectedIndicator = this.state.selectedIndicator || Dots;
+    const indicatorNames = Object.keys(Indicators);
+    const count = indicatorNames.length;
+    const SelectedIndicator = this.state.selectedIndicator || Indicators[indicatorNames[0]];
     const size = this.state.size || this.props.defaultSize;
     const speed = this.state.speed || this.props.defaultSpeed;
     const color = this.state.color || this.props.defaultColor;
@@ -48,7 +46,8 @@ export default React.createClass({
         <h2>Demo</h2>
         <p>The library comes with <b>{count}</b> indicators to choose from:</p>
         <div className="indicators">
-          {indicators.map((Indicator, i) => {
+          {indicatorNames.map((indicatorName, i) => {
+            const Indicator = Indicators[indicatorName];
             let selectedState = 'unselected';
             if (Indicator.displayName === SelectedIndicator.displayName) {
               selectedState = 'selected';

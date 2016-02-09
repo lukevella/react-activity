@@ -1,0 +1,37 @@
+@import "../common";
+
+@keyframes dots-pulse {
+  0% {
+    opacity: 0.1;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {opacity: 0.1}
+}
+
+.rai-squares {
+  .rai-square {
+    display: inline-block;
+    margin-right: 0.125em;
+    background-color: $rai-default-clr;
+    width: 0.5em;
+    height: 0.5em;
+    animation-name: dots-pulse;
+    animation-duration: inherit;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    &.one {
+      animation-delay: -0.3s;
+    }
+    &.two {
+      animation-delay: -0.2s;
+    }
+    &.three {
+      animation-delay: -0.1s;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,6 +1,7 @@
-import Dots from './Dots/Dots';
-import Levels from './Levels/Levels';
-import Sentry from './Sentry/Sentry';
-import Spinner from './Spinner/Spinner';
+import Dots from './Dots';
+import Levels from './Levels';
+import Sentry from './Sentry';
+import Spinner from './Spinner';
+import Squares from './Squares';
 
-export {Dots, Levels, Sentry, Spinner};
+export default {Dots, Levels, Sentry, Spinner, Squares};
