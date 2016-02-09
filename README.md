@@ -90,6 +90,9 @@ render(<App />, document.getElementById('app-container'))
 * `Levels`
 * `Sentry`
 * `Spinner`
+* `Squares`
+* `Digital`
+* `Bounce`
 
 ## Properties
 
