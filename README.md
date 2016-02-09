@@ -2,6 +2,8 @@
 
 A library of activity indicators in the form of React components.
 
+![preview](https://zippy.gfycat.com/HomelyFarflungGentoopenguin.gif)
+
 ## Demo & Examples
 
 Live demo: http://lukevella.com/react-activity
