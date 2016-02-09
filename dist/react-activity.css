@@ -13,10 +13,10 @@
 .rai-dots .rai-circle {
   border-radius: 100%;
   display: inline-block;
-  margin-right: 0.125em;
+  margin-right: em(3);
   background-color: #727981;
-  width: 0.5em;
-  height: 0.5em;
+  width: em(8);
+  height: em(8);
   animation-name: dots-pulse;
   animation-duration: inherit;
   animation-timing-function: ease-in-out;
@@ -67,9 +67,9 @@
   bottom: 0;
   display: inline-block;
   vertical-align: bottom;
-  width: 0.1875em;
+  width: em(4);
   background: #727981;
-  margin-right: 0.125em;
+  margin-right: em(2);
   height: 50%;
   animation-name: levels-pulse;
   animation-duration: inherit;
@@ -86,18 +86,16 @@
 @keyframes rai-sentry-pulse {
   from {
     transform: scale(0);
-    opacity: 1;
-    border-width: 0.1875em; }
+    opacity: 1; }
   to {
     transform: scale(1);
-    opacity: 0;
-    border-width: 0.125em; } }
+    opacity: 0; } }
 .rai-sentry {
   text-align: left;
   display: inline-block;
   position: relative;
-  width: 1.5em;
-  height: 1.5em; }
+  width: 2em;
+  height: 2em; }
   .rai-sentry .rai-wave-container {
     display: inline-flex;
     align-items: center;
@@ -108,7 +106,7 @@
     animation-duration: inherit; }
   .rai-sentry .rai-wave {
     display: inline-block;
-    border: 0.0625em solid #727981;
+    border: em(2) solid #727981;
     border-radius: 100%;
     box-sizing: border-box;
     width: 100%;
@@ -129,8 +127,8 @@
   to {
     transform: rotate(360deg); } }
 .rai-spinner {
-  width: 1em;
-  height: 1em;
+  width: 1.5em;
+  height: 1.5em;
   position: relative;
   margin: 0; }
   .rai-spinner-inner, .rai-spinner-outer {
@@ -140,10 +138,10 @@
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    margin-left: -0.1em;
-    margin-top: -0.1em; }
+    margin-left: em(-1);
+    margin-top: em(-1); }
   .rai-spinner-outer {
-    border: 0.125em solid #727981;
+    border: em(2) solid #727981;
     opacity: 0.2; }
   .rai-spinner-inner {
     position: absolute;
@@ -152,10 +150,10 @@
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    border-top: 0.125em solid #727981;
-    border-right: 0.125em solid transparent !important;
-    border-bottom: 0.125em solid transparent !important;
-    border-left: 0.125em solid transparent !important;
+    border-top: em(2) solid #727981;
+    border-right: em(2) solid transparent !important;
+    border-bottom: em(2) solid transparent !important;
+    border-left: em(2) solid transparent !important;
     animation-name: rai-spinner;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -175,10 +173,10 @@
     opacity: 0.1; } }
 .rai-squares .rai-square {
   display: inline-block;
-  margin-right: 0.125em;
+  margin-right: em(3);
   background-color: #727981;
-  width: 0.5em;
-  height: 0.5em;
+  width: em(8);
+  height: em(8);
   animation-name: dots-pulse;
   animation-duration: inherit;
   animation-timing-function: ease-in-out;
@@ -191,3 +189,35 @@
     animation-delay: -0.1s; }
   .rai-squares .rai-square:last-child {
     margin-right: 0; }
+
+.rai-activity-indicator {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 0; }
+
+@keyframes digital-pulse {
+  0%, 40%, 100% {
+    transform: scaleY(0.4); }
+  20% {
+    transform: scaleY(1); } }
+.rai-digital {
+  height: 1em;
+  text-align: center; }
+  .rai-digital > div {
+    display: inline-block;
+    margin-right: em(2);
+    background-color: #727981;
+    width: em(4);
+    height: 100%;
+    animation-name: digital-pulse;
+    animation-duration: inherit;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; }
+    .rai-digital > div.one {
+      animation-delay: -0.3s; }
+    .rai-digital > div.two {
+      animation-delay: -0.2s; }
+    .rai-digital > div.three {
+      animation-delay: -0.1s; }
+    .rai-digital > div:last-child {
+      margin-right: 0; }

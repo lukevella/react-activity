@@ -80,9 +80,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Squares2 = _interopRequireDefault(_Squares);
 
+	var _Digital = __webpack_require__(13);
+
+	var _Digital2 = _interopRequireDefault(_Digital);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	exports.default = { Dots: _Dots2.default, Levels: _Levels2.default, Sentry: _Sentry2.default, Spinner: _Spinner2.default, Squares: _Squares2.default };
+	exports.default = { Dots: _Dots2.default, Levels: _Levels2.default, Sentry: _Sentry2.default, Spinner: _Spinner2.default, Squares: _Squares2.default, Digital: _Digital2.default };
 
 /***/ },
 /* 1 */
@@ -471,6 +475,76 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 
 	exports.default = (0, _activityIndicator2.default)(Squares, 0.8);
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Digital = __webpack_require__(14);
+
+	var _Digital2 = _interopRequireDefault(_Digital);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _Digital2.default;
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(3);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _activityIndicator = __webpack_require__(4);
+
+	var _activityIndicator2 = _interopRequireDefault(_activityIndicator);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Digital = _react2.default.createClass({
+	  displayName: 'Digital',
+
+	  propTypes: {
+	    count: _react.PropTypes.number.isRequired
+	  },
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      count: 3
+	    };
+	  },
+	  render: function render() {
+	    var rects = [];
+	    for (var i = 1; i <= this.props.count; i++) {
+	      rects.unshift(_react2.default.createElement('div', {
+	        key: i,
+	        style: this.props.getFillStyle(i / 10)
+	      }));
+	    }
+
+	    return _react2.default.createElement(
+	      'div',
+	      _extends({}, this.props, { className: 'rai-digital' }),
+	      rects
+	    );
+	  }
+	});
+
+	exports.default = (0, _activityIndicator2.default)(Digital, 0.8);
 
 /***/ }
 /******/ ])

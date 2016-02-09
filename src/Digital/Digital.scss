@@ -1,0 +1,37 @@
+@import "../common";
+
+@keyframes digital-pulse {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+  }
+}
+
+.rai-digital {
+  height: 1em;
+  text-align: center;
+  & > div {
+    display: inline-block;
+    margin-right: em(2);
+    background-color: $rai-default-clr;
+    width: em(4);
+    height: 100%;
+    animation-name: digital-pulse;
+    animation-duration: inherit;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    &.one {
+      animation-delay: -0.3s;
+    }
+    &.two {
+      animation-delay: -0.2s;
+    }
+    &.three {
+      animation-delay: -0.1s;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
