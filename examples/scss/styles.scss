@@ -11,6 +11,15 @@ body, html {
   background: $blue-clr;
 }
 
+a {
+  color: tint($blue-clr, 80%);
+  text-decoration: none;
+  &:hover {
+    color: #FFF;
+    text-decoration: underline;
+  }
+}
+
 b {
   font-weight: bold;
 }
@@ -80,4 +89,21 @@ p {
       color: $blue-clr;
     }
   }
+}
+
+.credit {
+  font-size: 14px;
+  margin: 40px 0;
+  text-align: center;
+  &-text {
+    line-height: 1.5em;
+    margin-top: 10px;
+  }
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  border: 2px solid #FFF;
+  vertical-align: middle;
 }

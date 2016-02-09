@@ -16,6 +16,12 @@ const App = React.createClass({
           </div>
         </div>
         <Demo />
+        <div className="credit">
+          <img className="avatar" src="http://2.gravatar.com/avatar/dc95fb89b33917324415fa4d31f7c19a" />
+          <div className="credit-text">
+            Designed & Developed <br />by <a href="http://lukevella.com">Luke Vella</a>
+          </div>
+        </div>
       </div>
     )
   }
