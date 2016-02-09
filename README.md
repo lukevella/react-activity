@@ -4,7 +4,7 @@ A library of activity indicators in the form of React components.
 
 ## Demo & Examples
 
-Live demo: https://lukevella.github.io/react-activity
+Live demo: http://lukevella.com/react-activity
 
 To run the examples locally, run:
 
@@ -93,6 +93,7 @@ render(<App />, document.getElementById('app-container'))
 * `Squares`
 * `Digital`
 * `Bounce`
+* `Windmill`
 
 ## Properties
 
