@@ -2,16 +2,16 @@
 
 
 @keyframes rai-sentry-pulse {
-  from {transform: scale(0); opacity: 1; border-width: 0.1875em}
-  to {transform: scale(1); opacity: 0; border-width: 0.125em}
+  from {transform: scale(0); opacity: 1; }
+  to {transform: scale(1); opacity: 0; }
 }
 
 .rai-sentry {
   text-align: left;
   display: inline-block;
   position: relative;
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: 2em;
   .rai-wave-container {
     display: inline-flex;
     align-items: center;
@@ -23,7 +23,7 @@
   }
   .rai-wave {
     display: inline-block;
-    border: 0.0625em solid $rai-default-clr;
+    border: em(2) solid $rai-default-clr;
     border-radius: 100%;
     box-sizing: border-box;
     width: 100%;

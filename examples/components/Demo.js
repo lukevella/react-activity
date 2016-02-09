@@ -54,7 +54,7 @@ export default React.createClass({
             }
             return (
               <div className={`indicator ${selectedState}`} key={i} onClick={this.selectIndicator.bind(this, Indicator)}>
-                <Indicator color="#FFF" size={22} />
+                <Indicator color="#FFF" />
                 <div className="label">{Indicator.displayName}</div>
               </div>
             )
