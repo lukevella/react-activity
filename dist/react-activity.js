@@ -111,7 +111,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      _extends({ className: 'rai-dots' }, this.props),
+	      _extends({}, this.props, { className: 'rai-dots' }),
 	      _react2.default.createElement('div', {
 	        className: 'rai-circle',
 	        style: this.props.getFillStyle(0.3)
@@ -196,11 +196,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	        style.fontSize = this.props.size;
 	      }
 	      style.animationDuration = style.animationDuration * (1 / this.props.speed) + 's';
-	      return _react2.default.createElement(ComposedComponent, _extends({}, this.props, {
-	        getFillStyle: this.getFillStyle,
-	        getBorderStyle: this.getBorderStyle,
-	        style: style
-	      }));
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'rai-activity-indicator ' + this.props.className },
+	        _react2.default.createElement(ComposedComponent, _extends({}, this.props, {
+	          getFillStyle: this.getFillStyle,
+	          getBorderStyle: this.getBorderStyle,
+	          style: style
+	        }))
+	      );
 	    }
 	  });
 	};
@@ -232,7 +236,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      _extends({ className: 'rai-levels' }, this.props),
+	      _extends({}, this.props, { className: 'rai-levels' }),
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'rai-levels-container' },
@@ -273,7 +277,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      _extends({ className: 'rai-sentry' }, this.props),
+	      _extends({}, this.props, { className: 'rai-sentry' }),
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'rai-wave-container' },
@@ -317,7 +321,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      _extends({ className: 'rai-spinner' }, this.props),
+	      _extends({}, this.props, { className: 'rai-spinner' }),
 	      _react2.default.createElement('div', { className: 'rai-spinner-outer', style: this.props.getBorderStyle() }),
 	      _react2.default.createElement('div', { className: 'rai-spinner-inner', style: this.props.getBorderStyle() })
 	    );

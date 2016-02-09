@@ -44,11 +44,13 @@ export default ((ComposedComponent, defaultAnimationDuration) => {
       }
       style.animationDuration = style.animationDuration * (1 / this.props.speed) + 's';
       return (
-          <ComposedComponent {...this.props}
-            getFillStyle={this.getFillStyle}
-            getBorderStyle={this.getBorderStyle}
-            style={style}
-          />
+          <div className={`rai-activity-indicator ${this.props.className}`}>
+            <ComposedComponent {...this.props}
+              getFillStyle={this.getFillStyle}
+              getBorderStyle={this.getBorderStyle}
+              style={style}
+            />
+          </div>
       );
     }
   });

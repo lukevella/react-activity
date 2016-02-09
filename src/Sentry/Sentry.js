@@ -5,7 +5,7 @@ import activityIndicator from '../activityIndicator';
 const Sentry = React.createClass({
   render() {
     return (
-      <div className="rai-sentry" {...this.props}>
+      <div {...this.props} className="rai-sentry">
         <div className="rai-wave-container">
           <div className="rai-wave" style={this.props.getBorderStyle(0)} />
         </div>

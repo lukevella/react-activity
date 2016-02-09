@@ -1,3 +1,8 @@
+.rai-activity-indicator {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 0; }
+
 @keyframes dots-pulse {
   0% {
     opacity: 0.1; }
@@ -5,29 +10,30 @@
     opacity: 1; }
   100% {
     opacity: 0.1; } }
-.rai-dots {
+.rai-dots .rai-circle {
+  border-radius: 100%;
   display: inline-block;
-  font-size: 1em;
+  margin-right: 0.125em;
+  background-color: #727981;
+  width: 0.5em;
+  height: 0.5em;
+  animation-name: dots-pulse;
+  animation-duration: inherit;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
+  .rai-dots .rai-circle.one {
+    animation-delay: -0.3s; }
+  .rai-dots .rai-circle.two {
+    animation-delay: -0.2s; }
+  .rai-dots .rai-circle.three {
+    animation-delay: -0.1s; }
+  .rai-dots .rai-circle:last-child {
+    margin-right: 0; }
+
+.rai-activity-indicator {
+  display: inline-block;
+  font-size: 16px;
   line-height: 0; }
-  .rai-dots .rai-circle {
-    border-radius: 100%;
-    display: inline-block;
-    margin-right: 0.125em;
-    background-color: #727981;
-    width: 0.5em;
-    height: 0.5em;
-    animation-name: dots-pulse;
-    animation-duration: inherit;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite; }
-    .rai-dots .rai-circle.one {
-      animation-delay: -0.3s; }
-    .rai-dots .rai-circle.two {
-      animation-delay: -0.2s; }
-    .rai-dots .rai-circle.three {
-      animation-delay: -0.1s; }
-    .rai-dots .rai-circle:last-child {
-      margin-right: 0; }
 
 @keyframes levels-pulse {
   0% {
@@ -51,30 +57,31 @@
   100% {
     height: 30%;
     opacity: 0.5; } }
-.rai-levels {
+.rai-levels .rai-levels-container {
+  text-align: left;
   display: inline-block;
-  font-size: 1em;
+  height: 1em;
+  line-height: 1em;
+  animation-duration: inherit; }
+.rai-levels .rai-bar {
+  bottom: 0;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 0.1875em;
+  background: #727981;
+  margin-right: 0.125em;
+  height: 50%;
+  animation-name: levels-pulse;
+  animation-duration: inherit;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
+  .rai-levels .rai-bar:last-child {
+    margin-right: 0; }
+
+.rai-activity-indicator {
+  display: inline-block;
+  font-size: 16px;
   line-height: 0; }
-  .rai-levels .rai-levels-container {
-    text-align: left;
-    display: inline-block;
-    height: 1em;
-    line-height: 1em;
-    animation-duration: inherit; }
-  .rai-levels .rai-bar {
-    bottom: 0;
-    display: inline-block;
-    vertical-align: bottom;
-    width: 0.1875em;
-    background: #727981;
-    margin-right: 0.125em;
-    height: 50%;
-    animation-name: levels-pulse;
-    animation-duration: inherit;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite; }
-    .rai-levels .rai-bar:last-child {
-      margin-right: 0; }
 
 @keyframes rai-sentry-pulse {
   from {
@@ -86,9 +93,6 @@
     opacity: 0;
     border-width: 0.125em; } }
 .rai-sentry {
-  display: inline-block;
-  font-size: 1.25em;
-  line-height: 0;
   text-align: left;
   display: inline-block;
   position: relative;
@@ -114,15 +118,17 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite; }
 
+.rai-activity-indicator {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 0; }
+
 @keyframes rai-spinner {
   from {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
 .rai-spinner {
-  display: inline-block;
-  font-size: 1em;
-  line-height: 0;
   width: 1em;
   height: 1em;
   position: relative;

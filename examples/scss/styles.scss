@@ -67,6 +67,7 @@ p {
 }
 
 .header-links {
+  font-size: 14px;
   & > a {
     border: 2px solid #FFF;
     color: #FFF;
@@ -75,6 +76,7 @@ p {
     border-radius: 3px;
     &:hover {
       background: #FFF;
+      border-color: #FFF;
       color: $blue-clr;
     }
   }

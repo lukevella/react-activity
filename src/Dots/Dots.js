@@ -4,7 +4,7 @@ import activityIndicator from '../activityIndicator';
 const Dots = React.createClass({
   render() {
     return (
-      <div className="rai-dots" {...this.props}>
+      <div {...this.props} className="rai-dots">
         <div
           className="rai-circle"
           style={this.props.getFillStyle(0.3)}

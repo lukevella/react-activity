@@ -9,7 +9,8 @@ var config = {
   },
   output: {
     path: path.resolve('examples/build'),
-    filename: '[name].js'
+    filename: '[name].js',
+    publicPath: 'examples/build'
   },
   module: {
     loaders: [
