@@ -2,19 +2,20 @@
 
 @keyframes bounce-pulse {
   0% {
-    transform: translateY(0);
+    transform: translateY(em(3));
   }
   30% {
-    transform: translateY(em(-6));
+    transform: translateY(em(-4));
   }
-  60% {
-    transform: translateY(0);
+  50% {
+    transform: translateY(3);
   }
 
 }
 
 .rai-bounce {
   & > div {
+    transform: translateY(em(3));
     border-radius: 100%;
     display: inline-block;
     margin-right: em(3);
