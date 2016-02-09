@@ -5,5 +5,6 @@ import Spinner from './Spinner';
 import Squares from './Squares';
 import Digital from './Digital';
 import Bounce from './Bounce';
+import Windmill from './Windmill';
 
-export default {Dots, Levels, Sentry, Spinner, Squares, Digital, Bounce};
+export default {Dots, Levels, Sentry, Spinner, Squares, Digital, Bounce, Windmill};

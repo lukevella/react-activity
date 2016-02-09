@@ -88,9 +88,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Bounce2 = _interopRequireDefault(_Bounce);
 
+	var _Windmill = __webpack_require__(17);
+
+	var _Windmill2 = _interopRequireDefault(_Windmill);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	exports.default = { Dots: _Dots2.default, Levels: _Levels2.default, Sentry: _Sentry2.default, Spinner: _Spinner2.default, Squares: _Squares2.default, Digital: _Digital2.default, Bounce: _Bounce2.default };
+	exports.default = { Dots: _Dots2.default, Levels: _Levels2.default, Sentry: _Sentry2.default, Spinner: _Spinner2.default, Squares: _Squares2.default, Digital: _Digital2.default, Bounce: _Bounce2.default, Windmill: _Windmill2.default };
 
 /***/ },
 /* 1 */
@@ -618,6 +622,78 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 
 	exports.default = (0, _activityIndicator2.default)(Bounce, 0.8);
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Windmill = __webpack_require__(18);
+
+	var _Windmill2 = _interopRequireDefault(_Windmill);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _Windmill2.default;
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(3);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _activityIndicator = __webpack_require__(4);
+
+	var _activityIndicator2 = _interopRequireDefault(_activityIndicator);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var animationDuration = 0.8;
+
+	var Windmill = _react2.default.createClass({
+	  displayName: 'Windmill',
+
+	  propTypes: {
+	    count: _react.PropTypes.number.isRequired
+	  },
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      count: 1
+	    };
+	  },
+	  render: function render() {
+	    var windill = [];
+	    for (var i = 1; i <= this.props.count; i++) {
+	      var style = this.props.getFillStyle(i / (this.props.count * 2 / animationDuration));
+	      windill.unshift(_react2.default.createElement('div', {
+	        key: i,
+	        style: style
+	      }));
+	    }
+	    return _react2.default.createElement(
+	      'div',
+	      _extends({}, this.props, { className: 'rai-windill' }),
+	      windill
+	    );
+	  }
+	});
+
+	exports.default = (0, _activityIndicator2.default)(Windmill, animationDuration);
 
 /***/ }
 /******/ ])
