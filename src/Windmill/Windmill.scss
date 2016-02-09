@@ -15,7 +15,8 @@
     border-radius: em(2);
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    margin-left: em(-1);
     width: em(2);
     height: 100%;
     animation-name: windill-pulse;
