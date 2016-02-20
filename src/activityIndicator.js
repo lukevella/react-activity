@@ -36,19 +36,25 @@ export default ((ComposedComponent, defaultAnimationDuration) => {
       return style;
     },
     render() {
-      const style = {
-        animationDuration: this.props.animationDuration
+      const containerStyle = {
+        display: 'inline-block',
+        fontSize: '16px',
+        lineHeight: '0'
+      };
+      const indicatorStyle = {
+        animationDuration: this.props.animationDuration * (1 / this.props.speed) + 's'
       };
       if (this.props.size) {
-        style.fontSize = this.props.size
+        indicatorStyle.fontSize = this.props.size
       }
-      style.animationDuration = style.animationDuration * (1 / this.props.speed) + 's';
+      let className = 'rai-activity-indicator';
+      className += this.props.className ? ` ${this.props.className}` : '';
       return (
-          <div className={`rai-activity-indicator ${this.props.className}`}>
+          <div style={containerStyle} className={this.props.className}>
             <ComposedComponent {...this.props}
               getFillStyle={this.getFillStyle}
               getBorderStyle={this.getBorderStyle}
-              style={style}
+              style={indicatorStyle}
             />
           </div>
       );
