@@ -24,11 +24,6 @@
   .rai-dots .rai-circle:last-child {
     margin-right: 0; }
 
-.rai-activity-indicator {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 0; }
-
 @keyframes levels-pulse {
   0% {
     height: 30%;
@@ -72,11 +67,6 @@
   .rai-levels .rai-bar:last-child {
     margin-right: 0; }
 
-.rai-activity-indicator {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 0; }
-
 @keyframes rai-sentry-pulse {
   from {
     transform: scale(0);
@@ -109,11 +99,6 @@
     animation-duration: inherit;
     animation-timing-function: linear;
     animation-iteration-count: infinite; }
-
-.rai-activity-indicator {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 0; }
 
 @keyframes rai-spinner {
   from {
@@ -153,11 +138,6 @@
     animation-timing-function: linear;
     animation-duration: inherit; }
 
-.rai-activity-indicator {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 0; }
-
 @keyframes dots-pulse {
   0% {
     opacity: 0.1; }
@@ -177,11 +157,6 @@
   animation-iteration-count: infinite; }
   .rai-squares .rai-square:last-child {
     margin-right: 0; }
-
-.rai-activity-indicator {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 0; }
 
 @keyframes digital-pulse {
   0%, 40%, 100% {
@@ -203,11 +178,6 @@
     animation-iteration-count: infinite; }
     .rai-digital > div:last-child {
       margin-right: 0; }
-
-.rai-activity-indicator {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 0; }
 
 @keyframes bounce-pulse {
   0% {
