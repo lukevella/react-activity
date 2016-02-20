@@ -13,10 +13,10 @@
 .rai-dots .rai-circle {
   border-radius: 100%;
   display: inline-block;
-  margin-right: em(3);
+  margin-right: 0.1875em;
   background-color: #727981;
-  width: em(8);
-  height: em(8);
+  width: 0.5em;
+  height: 0.5em;
   animation-name: dots-pulse;
   animation-duration: inherit;
   animation-timing-function: ease-in-out;
@@ -61,9 +61,9 @@
   bottom: 0;
   display: inline-block;
   vertical-align: bottom;
-  width: em(4);
+  width: 0.25em;
   background: #727981;
-  margin-right: em(2);
+  margin-right: 0.125em;
   height: 50%;
   animation-name: levels-pulse;
   animation-duration: inherit;
@@ -100,7 +100,7 @@
     animation-duration: inherit; }
   .rai-sentry .rai-wave {
     display: inline-block;
-    border: em(2) solid #727981;
+    border: 0.125em solid #727981;
     border-radius: 100%;
     box-sizing: border-box;
     width: 100%;
@@ -132,10 +132,10 @@
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    margin-left: em(-1);
-    margin-top: em(-1); }
+    margin-left: -0.0625em;
+    margin-top: -0.0625em; }
   .rai-spinner-outer {
-    border: em(2) solid #727981;
+    border: 0.125em solid #727981;
     opacity: 0.2; }
   .rai-spinner-inner {
     position: absolute;
@@ -144,10 +144,10 @@
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    border-top: em(2) solid #727981;
-    border-right: em(2) solid transparent !important;
-    border-bottom: em(2) solid transparent !important;
-    border-left: em(2) solid transparent !important;
+    border-top: 0.125em solid #727981;
+    border-right: 0.125em solid transparent !important;
+    border-bottom: 0.125em solid transparent !important;
+    border-left: 0.125em solid transparent !important;
     animation-name: rai-spinner;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -167,10 +167,10 @@
     opacity: 0.1; } }
 .rai-squares .rai-square {
   display: inline-block;
-  margin-right: em(3);
+  margin-right: 0.1875em;
   background-color: #727981;
-  width: em(8);
-  height: em(8);
+  width: 0.5em;
+  height: 0.5em;
   animation-name: dots-pulse;
   animation-duration: inherit;
   animation-timing-function: ease-in-out;
@@ -193,9 +193,9 @@
   text-align: center; }
   .rai-digital > div {
     display: inline-block;
-    margin-right: em(2);
+    margin-right: 0.125em;
     background-color: #727981;
-    width: em(4);
+    width: 0.25em;
     height: 100%;
     animation-name: digital-pulse;
     animation-duration: inherit;
@@ -211,19 +211,19 @@
 
 @keyframes bounce-pulse {
   0% {
-    transform: translateY(em(3)); }
+    transform: translateY(0.1875em); }
   30% {
-    transform: translateY(em(-4)); }
+    transform: translateY(-0.25em); }
   50% {
     transform: translateY(3); } }
 .rai-bounce > div {
-  transform: translateY(em(3));
+  transform: translateY(0.1875em);
   border-radius: 100%;
   display: inline-block;
-  margin-right: em(3);
+  margin-right: 0.1875em;
   background-color: #727981;
-  width: em(8);
-  height: em(8);
+  width: 0.5em;
+  height: 0.5em;
   animation-name: bounce-pulse;
   animation-duration: inherit;
   animation-timing-function: ease-in-out;
@@ -241,12 +241,12 @@
   height: 1em;
   position: relative; }
   .rai-windill > div {
-    border-radius: em(2);
+    border-radius: 0.125em;
     position: absolute;
     top: 0;
     left: 50%;
-    margin-left: em(-1);
-    width: em(2);
+    margin-left: -0.0625em;
+    width: 0.125em;
     height: 100%;
     animation-name: windill-pulse;
     animation-duration: inherit;

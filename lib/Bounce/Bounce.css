@@ -5,19 +5,19 @@
 
 @keyframes bounce-pulse {
   0% {
-    transform: translateY(em(3)); }
+    transform: translateY(0.1875em); }
   30% {
-    transform: translateY(em(-4)); }
+    transform: translateY(-0.25em); }
   50% {
     transform: translateY(3); } }
 .rai-bounce > div {
-  transform: translateY(em(3));
+  transform: translateY(0.1875em);
   border-radius: 100%;
   display: inline-block;
-  margin-right: em(3);
+  margin-right: 0.1875em;
   background-color: #727981;
-  width: em(8);
-  height: em(8);
+  width: 0.5em;
+  height: 0.5em;
   animation-name: bounce-pulse;
   animation-duration: inherit;
   animation-timing-function: ease-in-out;

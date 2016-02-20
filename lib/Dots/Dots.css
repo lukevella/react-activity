@@ -13,10 +13,10 @@
 .rai-dots .rai-circle {
   border-radius: 100%;
   display: inline-block;
-  margin-right: em(3);
+  margin-right: 0.1875em;
   background-color: #727981;
-  width: em(8);
-  height: em(8);
+  width: 0.5em;
+  height: 0.5em;
   animation-name: dots-pulse;
   animation-duration: inherit;
   animation-timing-function: ease-in-out;

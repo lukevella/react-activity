@@ -13,9 +13,9 @@
   text-align: center; }
   .rai-digital > div {
     display: inline-block;
-    margin-right: em(2);
+    margin-right: 0.125em;
     background-color: #727981;
-    width: em(4);
+    width: 0.25em;
     height: 100%;
     animation-name: digital-pulse;
     animation-duration: inherit;

@@ -35,9 +35,9 @@
   bottom: 0;
   display: inline-block;
   vertical-align: bottom;
-  width: em(4);
+  width: 0.25em;
   background: #727981;
-  margin-right: em(2);
+  margin-right: 0.125em;
   height: 50%;
   animation-name: levels-pulse;
   animation-duration: inherit;

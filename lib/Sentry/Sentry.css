@@ -26,7 +26,7 @@
     animation-duration: inherit; }
   .rai-sentry .rai-wave {
     display: inline-block;
-    border: em(2) solid #727981;
+    border: 0.125em solid #727981;
     border-radius: 100%;
     box-sizing: border-box;
     width: 100%;
