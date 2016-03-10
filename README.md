@@ -108,4 +108,4 @@ suits your needs.
 
 ## License
 
-See [LICENSE](https://github.com/lukevella/react-activity/blob/master/LICENSE) file.
+See [LICENSE](https://github.com/lukevella/react-activity/blob/gh-pages/LICENSE) file.
