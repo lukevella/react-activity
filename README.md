@@ -1,5 +1,7 @@
 # React Activity Indicators
 
+[![Build Status](https://travis-ci.org/lukevella/react-activity.svg)](https://travis-ci.org/lukevella/react-activity)
+
 A library of activity indicators in the form of React components.
 
 ![preview](https://zippy.gfycat.com/HomelyFarflungGentoopenguin.gif)
