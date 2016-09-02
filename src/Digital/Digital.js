@@ -22,7 +22,7 @@ const Digital = React.createClass({
     }
 
     return (
-      <div {...this.props} className="rai-digital">
+      <div style={this.props.style} className="rai-digital">
         {rects}
       </div>
     );

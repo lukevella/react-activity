@@ -22,7 +22,7 @@ const Squares = React.createClass({
       )
     }
     return (
-      <div {...this.props} className="rai-squares">
+      <div style={this.props.style} className="rai-squares">
         {squares}
       </div>
     );

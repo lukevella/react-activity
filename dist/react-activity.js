@@ -120,8 +120,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
@@ -141,7 +139,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      _extends({}, this.props, { className: 'rai-dots' }),
+	      { style: this.props.style, className: 'rai-dots' },
 	      _react2.default.createElement('div', {
 	        className: 'rai-circle',
 	        style: this.props.getFillStyle(0.3)
@@ -172,11 +170,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _react = __webpack_require__(3);
 
@@ -269,8 +267,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
@@ -290,7 +286,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      _extends({}, this.props, { className: 'rai-levels' }),
+	      { style: this.props.style, className: 'rai-levels' },
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'rai-levels-container' },
@@ -328,8 +324,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
@@ -349,7 +343,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      _extends({}, this.props, { className: 'rai-sentry' }),
+	      { style: this.props.style, className: 'rai-sentry' },
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'rai-wave-container' },
@@ -390,8 +384,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
@@ -411,7 +403,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      _extends({}, this.props, { className: 'rai-spinner' }),
+	      { style: this.props.style, className: 'rai-spinner' },
 	      _react2.default.createElement('div', { className: 'rai-spinner-outer', style: this.props.getBorderStyle() }),
 	      _react2.default.createElement('div', { className: 'rai-spinner-inner', style: this.props.getBorderStyle() })
 	    );
@@ -443,8 +435,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -482,7 +472,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	    return _react2.default.createElement(
 	      'div',
-	      _extends({}, this.props, { className: 'rai-squares' }),
+	      { style: this.props.style, className: 'rai-squares' },
 	      squares
 	    );
 	  }
@@ -513,8 +503,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -552,7 +540,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    return _react2.default.createElement(
 	      'div',
-	      _extends({}, this.props, { className: 'rai-digital' }),
+	      { style: this.props.style, className: 'rai-digital' },
 	      rects
 	    );
 	  }
@@ -583,8 +571,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -621,7 +607,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	    return _react2.default.createElement(
 	      'div',
-	      _extends({}, this.props, { className: 'rai-bounce' }),
+	      { style: this.props.style, className: 'rai-bounce' },
 	      squares
 	    );
 	  }
@@ -652,8 +638,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -693,7 +677,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	    return _react2.default.createElement(
 	      'div',
-	      _extends({}, this.props, { className: 'rai-windill' }),
+	      { style: this.props.style, className: 'rai-windill' },
 	      windill
 	    );
 	  }
