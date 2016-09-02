@@ -21,7 +21,7 @@ const Bounce = React.createClass({
       )
     }
     return (
-      <div {...this.props} className="rai-bounce">
+      <div style={this.props.style} className="rai-bounce">
         {squares}
       </div>
     );

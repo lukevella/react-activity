@@ -6,7 +6,7 @@ import activityIndicator from '../activityIndicator';
 const Levels = React.createClass({
   render() {
     return (
-      <div {...this.props} className="rai-levels">
+      <div style={this.props.style} className="rai-levels">
         <div className="rai-levels-container">
           <div className="rai-bar" style={this.props.getFillStyle()} />
           <div className="rai-bar" style={this.props.getFillStyle(0.25)} />

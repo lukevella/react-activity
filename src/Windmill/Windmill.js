@@ -24,7 +24,7 @@ const Windmill = React.createClass({
       )
     }
     return (
-      <div {...this.props} className="rai-windill">
+      <div style={this.props.style} className="rai-windill">
         {windill}
       </div>
     );
