@@ -8,7 +8,7 @@ A library of activity indicators in the form of React components.
 
 ## Demo & Examples
 
-Live demo: http://lukevella.com/react-activity
+Live demo: http://labs.lukevella.com/react-activity
 
 To run the examples locally, run:
 
