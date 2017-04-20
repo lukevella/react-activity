@@ -17,8 +17,7 @@ const Bounce = (props) => {
       {squares}
     </div>
   );
-}
-
+};
 
 Bounce.propTypes = {
   count: PropTypes.number.isRequired
