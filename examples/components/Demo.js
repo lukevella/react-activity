@@ -3,37 +3,35 @@ import React from 'react';
 import Indicators from '../../src';
 import './Demo.scss';
 
-export default React.createClass({
-  getDefaultProps() {
-    return {
-      defaultSize: 32,
-      defaultSpeed: 1,
-      defaultColor: '#727981'
-    };
-  },
-  getInitialState() {
-    return {};
-  },
+class Demo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.selectIndicator = this.selectIndicator.bind(this);
+    this.onChangeSize = this.onChangeSize.bind(this);
+    this.onChangeSpeed = this.onChangeSpeed.bind(this);
+    this.onChangeColor = this.onChangeColor.bind(this);
+  }
   selectIndicator(Indicator) {
     this.setState({
       selectedIndicator: Indicator,
     });
-  },
+  }
   onChangeSize(e) {
     this.setState({
       size: parseInt(e.target.value)
     });
-  },
+  }
   onChangeSpeed(e) {
     this.setState({
       speed: parseFloat(e.target.value)
     });
-  },
+  }
   onChangeColor(e) {
     this.setState({
       color: e.target.value
     });
-  },
+  }
   render() {
     const indicatorNames = Object.keys(Indicators);
     const count = indicatorNames.length;
@@ -86,4 +84,12 @@ export default React.createClass({
       </div>
     );
   }
-})
+}
+
+Demo.defaultProps = {
+  defaultSize: 32,
+  defaultSpeed: 1,
+  defaultColor: '#727981',
+};
+
+export default Demo;

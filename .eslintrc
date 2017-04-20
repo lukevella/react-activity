@@ -15,7 +15,7 @@
     "no-underscore-dangle": [0],
     "brace-style": [2, "1tbs"],
     "no-mixed-spaces-and-tabs": 2,
-    "space-after-keywords": [2, "always"],
+    "keyword-spacing": [2, {"after": true}],
     "object-curly-spacing": [2, "never"],
     "computed-property-spacing": [2, "never"],
     "array-bracket-spacing": [2, "never"],
@@ -28,8 +28,9 @@
     "no-spaced-func": 2,
     "camelcase": 2,
     "space-infix-ops": 2,
-    "react/jsx-uses-vars": 1,
     "no-unused-vars": 2,
+    "react/jsx-uses-vars": 2,
+    "react/jsx-uses-react": 2,
     "no-undef": 2
   }
 }

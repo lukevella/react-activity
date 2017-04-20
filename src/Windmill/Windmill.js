@@ -1,34 +1,33 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import activityIndicator from '../activityIndicator';
 
 const animationDuration = 0.8;
 
-const Windmill = React.createClass({
-  propTypes: {
-    count: PropTypes.number.isRequired
-  },
-  getDefaultProps() {
-    return {
-      count: 1
-    }
-  },
-  render() {
-    let windill = [];
-    for (let i = 1; i <= this.props.count; i++) {
-      const style = this.props.getFillStyle(i / ((this.props.count * 2) / animationDuration));
-      windill.unshift(
-        <div
-          key={i}
-          style={style}
-        />
-      )
-    }
-    return (
-      <div style={this.props.style} className="rai-windill">
-        {windill}
-      </div>
-    );
+const Windmill = (props) => {
+  let windill = [];
+  for (let i = 1; i <= props.count; i++) {
+    const style = props.getFillStyle(i / ((props.count * 2) / animationDuration));
+    windill.unshift(
+      <div
+        key={i}
+        style={style}
+      />
+    )
   }
-});
+  return (
+    <div style={props.style} className="rai-windill">
+      {windill}
+    </div>
+  );
+};
+
+Windmill.propTypes = {
+  count: PropTypes.number.isRequired,
+};
+
+Windmill.defaultProps = {
+  count: 1,
+};
 
 export default activityIndicator(Windmill, animationDuration);
