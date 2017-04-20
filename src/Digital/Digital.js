@@ -1,32 +1,31 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import activityIndicator from '../activityIndicator';
 
-const Digital = React.createClass({
-  propTypes: {
-    count: PropTypes.number.isRequired
-  },
-  getDefaultProps() {
-    return {
-      count: 3
-    }
-  },
-  render() {
-    let rects = [];
-    for (let i = 1; i <= this.props.count; i++) {
-      rects.unshift(
-        <div
-          key={i}
-          style={this.props.getFillStyle(i / 10)}
-        />
-      )
-    }
-
-    return (
-      <div style={this.props.style} className="rai-digital">
-        {rects}
-      </div>
-    );
+const Digital = (props) => {
+  let rects = [];
+  for (let i = 1; i <= props.count; i++) {
+    rects.unshift(
+      <div
+        key={i}
+        style={props.getFillStyle(i / 10)}
+      />
+    )
   }
-});
+
+  return (
+    <div style={props.style} className="rai-digital">
+      {rects}
+    </div>
+  );
+};
+
+Digital.propTypes = {
+  count: PropTypes.number.isRequired,
+};
+
+Digital.defaultProps = {
+  count: 3,
+};
 
 export default activityIndicator(Digital, 0.8);
