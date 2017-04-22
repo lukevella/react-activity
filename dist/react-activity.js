@@ -59,6 +59,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.Windmill = exports.Bounce = exports.Digital = exports.Squares = exports.Spinner = exports.Sentry = exports.Levels = exports.Dots = undefined;
 
 	var _Dots = __webpack_require__(1);
 
@@ -94,6 +95,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	exports.Dots = _Dots2.default;
+	exports.Levels = _Levels2.default;
+	exports.Sentry = _Sentry2.default;
+	exports.Spinner = _Spinner2.default;
+	exports.Squares = _Squares2.default;
+	exports.Digital = _Digital2.default;
+	exports.Bounce = _Bounce2.default;
+	exports.Windmill = _Windmill2.default;
 	exports.default = { Dots: _Dots2.default, Levels: _Levels2.default, Sentry: _Sentry2.default, Spinner: _Spinner2.default, Squares: _Squares2.default, Digital: _Digital2.default, Bounce: _Bounce2.default, Windmill: _Windmill2.default };
 
 /***/ }),

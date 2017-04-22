@@ -7,4 +7,5 @@ import Digital from './Digital';
 import Bounce from './Bounce';
 import Windmill from './Windmill';
 
+export {Dots, Levels, Sentry, Spinner, Squares, Digital, Bounce, Windmill};
 export default {Dots, Levels, Sentry, Spinner, Squares, Digital, Bounce, Windmill};
