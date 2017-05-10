@@ -1,6 +1,7 @@
 # React Activity Indicators
 
 [![Build Status](https://travis-ci.org/lukevella/react-activity.svg)](https://travis-ci.org/lukevella/react-activity)
+[![NPM Downloads](https://img.shields.io/npm/dm/react-activity.svg)](https://www.npmjs.com/package/react-activity)
 
 A library of activity indicators in the form of React components.
 
