@@ -180,8 +180,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(3);
@@ -245,6 +243,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }, {
 	      key: 'render',
 	      value: function render() {
+	        if (!this.props.animating) {
+	          return null;
+	        }
 	        var containerStyle = {
 	          display: 'inline-block',
 	          fontSize: '16px',
@@ -256,16 +257,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (this.props.size) {
 	          indicatorStyle.fontSize = this.props.size;
 	        }
-	        var className = 'rai-activity-indicator';
-	        className += this.props.className ? ' ' + this.props.className : '';
 	        return _react2.default.createElement(
 	          'div',
-	          { style: containerStyle, className: className },
-	          _react2.default.createElement(ComposedComponent, _extends({}, this.props, {
+	          {
+	            style: containerStyle,
+	            className: 'rai-activity-indicator ' + this.props.className
+	          },
+	          _react2.default.createElement(ComposedComponent, {
 	            getFillStyle: this.getFillStyle,
 	            getBorderStyle: this.getBorderStyle,
 	            style: indicatorStyle
-	          }))
+	          })
 	        );
 	      }
 	    }]);
@@ -275,12 +277,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  ActivityIndicator.propTypes = {
 	    animationDuration: _propTypes2.default.number.isRequired,
-	    speed: _propTypes2.default.number
+	    speed: _propTypes2.default.number,
+	    animating: _propTypes2.default.bool.isRequired
 	  };
 
 	  ActivityIndicator.defaultProps = {
 	    animationDuration: defaultAnimationDuration,
-	    speed: 1
+	    speed: 1,
+	    animating: true
 	  };
 
 	  ActivityIndicator.displayName = ComposedComponent.name;

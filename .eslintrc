@@ -15,7 +15,6 @@
     "no-underscore-dangle": [0],
     "brace-style": [2, "1tbs"],
     "no-mixed-spaces-and-tabs": 2,
-    "keyword-spacing": [2, {"after": true}],
     "object-curly-spacing": [2, "never"],
     "computed-property-spacing": [2, "never"],
     "array-bracket-spacing": [2, "never"],

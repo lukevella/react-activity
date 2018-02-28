@@ -1,4 +1,3 @@
-'use strict';
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -32,6 +31,9 @@ export default ((ComposedComponent, defaultAnimationDuration) => {
       return style;
     }
     render() {
+      if (!this.props.animating) {
+        return null;
+      }
       const containerStyle = {
         display: 'inline-block',
         fontSize: '16px',
@@ -43,11 +45,12 @@ export default ((ComposedComponent, defaultAnimationDuration) => {
       if (this.props.size) {
         indicatorStyle.fontSize = this.props.size
       }
-      let className = 'rai-activity-indicator';
-      className += this.props.className ? ` ${this.props.className}` : '';
       return (
-          <div style={containerStyle} className={className}>
-            <ComposedComponent {...this.props}
+          <div
+            style={containerStyle}
+            className={`rai-activity-indicator ${this.props.className}`}
+          >
+            <ComposedComponent
               getFillStyle={this.getFillStyle}
               getBorderStyle={this.getBorderStyle}
               style={indicatorStyle}
@@ -60,11 +63,13 @@ export default ((ComposedComponent, defaultAnimationDuration) => {
   ActivityIndicator.propTypes = {
     animationDuration: PropTypes.number.isRequired,
     speed: PropTypes.number,
+    animating: PropTypes.bool.isRequired,
   };
 
   ActivityIndicator.defaultProps = {
     animationDuration: defaultAnimationDuration,
     speed: 1,
+    animating: true,
   };
 
   ActivityIndicator.displayName = ComposedComponent.name;

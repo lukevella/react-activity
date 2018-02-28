@@ -62,7 +62,8 @@ p {
 .app-container {
   margin: 80px auto;
   padding: 0 40px;
-  max-width: 880px;
+  max-width: 1024px;
+  min-width: 880px;
 }
 
 .header {
@@ -106,4 +107,17 @@ p {
   border-radius: 100%;
   border: 2px solid #FFF;
   vertical-align: middle;
+}
+
+.canvas {
+  display: table;
+  width: 100%;
+  height: 200px;
+  background: tint($blue-clr, 92%);
+}
+
+.canvas > div {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }

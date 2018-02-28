@@ -107,7 +107,7 @@ specified in ems so play around with a value until you find something that
 suits your needs.
 * `color: string` The active color of the indicator.
 * `speed: number (Default: 1)` The relative animation speed of the indicator.
-
+* `animating: boolean (Default: true)` Whether to show the indicator (true) or hide it (false).
 
 ## License
 

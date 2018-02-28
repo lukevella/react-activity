@@ -1,16 +1,24 @@
-'use strict';
 import React from 'react';
 import Indicators from '../../src';
+import Switch from './Switch';
 import './Demo.scss';
 
 class Demo extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    const indicatorNames = Object.keys(Indicators);
+    this.state = {
+      size: 32,
+      speed: 1,
+      color: '#727981',
+      animating: true,
+      selectedIndicator: Indicators[indicatorNames[0]],
+    };
     this.selectIndicator = this.selectIndicator.bind(this);
     this.onChangeSize = this.onChangeSize.bind(this);
     this.onChangeSpeed = this.onChangeSpeed.bind(this);
     this.onChangeColor = this.onChangeColor.bind(this);
+    this.onChangeAnimating = this.onChangeAnimating.bind(this);
   }
   selectIndicator(Indicator) {
     this.setState({
@@ -32,13 +40,16 @@ class Demo extends React.Component {
       color: e.target.value
     });
   }
+  onChangeAnimating(value) {
+    this.setState({
+      animating: value,
+    });
+  }
   render() {
     const indicatorNames = Object.keys(Indicators);
     const count = indicatorNames.length;
-    const SelectedIndicator = this.state.selectedIndicator || Indicators[indicatorNames[0]];
-    const size = this.state.size || this.props.defaultSize;
-    const speed = this.state.speed || this.props.defaultSpeed;
-    const color = this.state.color || this.props.defaultColor;
+    const SelectedIndicator = this.state.selectedIndicator;
+    const {size, speed, color, animating} = this.state;
     return (
       <div className="demo">
         <h2>Demo</h2>
@@ -73,23 +84,25 @@ class Demo extends React.Component {
               <label>Speed</label>
               <input type="number" value={speed} step="0.1" min="0.1" max="2" onChange={this.onChangeSpeed}/>
             </div>
+            <div className="demo-option">
+              <label>Animating</label>
+              <Switch onChange={this.onChangeAnimating} active={animating} />
+            </div>
           </div>
           <div className="demo-output">
             <h3>Code</h3>
-            <pre>{`<${SelectedIndicator.displayName} color="${color}" size=\{${size}\} speed=\{${speed}\} />`}</pre>
+            <pre>{`<${SelectedIndicator.displayName} color="${color}" size=\{${size}\} speed=\{${speed}\} animating=\{${animating}\} />`}</pre>
             <h3>Render</h3>
-            <SelectedIndicator color={color} size={size} speed={speed} />
+            <div className="canvas">
+              <div>
+                <SelectedIndicator color={color} size={size} speed={speed} animating={animating} />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     );
   }
 }
-
-Demo.defaultProps = {
-  defaultSize: 32,
-  defaultSpeed: 1,
-  defaultColor: '#727981',
-};
 
 export default Demo;

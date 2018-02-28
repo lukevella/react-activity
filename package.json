@@ -1,6 +1,6 @@
 {
   "name": "react-activity",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "description": "Activity indicator component library for React applications.",
   "main": "./dist/react-activity.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "compile:lib": "rm -Rf ./lib && babel src --out-dir lib && sass --update src:lib --sourcemap=none && git add lib",
     "build": "webpack --progress --colors && sass --update -f src/styles.scss:dist/react-activity.css --sourcemap=none && git add dist",
     "lint": "eslint ./src",
+    "watch": "webpack --progress --colors --watch & sass --update --watch -f src/styles.scss:dist/react-activity.css --sourcemap=none",
     "build:examples": "NODE_ENV=production webpack --config examples/webpack.config.js && git add examples/build"
   },
   "pre-commit": [
@@ -39,6 +40,7 @@
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.23.0",
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.16.1",
