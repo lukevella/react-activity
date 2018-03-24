@@ -46,7 +46,7 @@ class App extends Component {
   render() {
     return <Dots />;
   }
-});
+}
 
 render(<App />, document.getElementById('app-container'))
 ```
@@ -66,7 +66,7 @@ class App extends Component {
   render() {
     return <Dots />;
   }
-});
+}
 
 render(<App />, document.getElementById('app-container'))
 ```
