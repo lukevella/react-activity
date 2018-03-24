@@ -1,6 +1,6 @@
 {
   "name": "react-activity",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Activity indicator component library for React applications.",
   "main": "./dist/react-activity.js",
   "scripts": {
