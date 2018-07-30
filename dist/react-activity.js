@@ -261,7 +261,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          'div',
 	          {
 	            style: containerStyle,
-	            className: 'rai-activity-indicator ' + this.props.className
+	            className: 'rai-activity-indicator'
 	          },
 	          _react2.default.createElement(ComposedComponent, {
 	            getFillStyle: this.getFillStyle,

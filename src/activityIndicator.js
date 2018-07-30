@@ -46,16 +46,16 @@ export default ((ComposedComponent, defaultAnimationDuration) => {
         indicatorStyle.fontSize = this.props.size
       }
       return (
-          <div
-            style={containerStyle}
-            className={`rai-activity-indicator ${this.props.className}`}
-          >
-            <ComposedComponent
-              getFillStyle={this.getFillStyle}
-              getBorderStyle={this.getBorderStyle}
-              style={indicatorStyle}
-            />
-          </div>
+        <div
+          style={containerStyle}
+          className="rai-activity-indicator"
+        >
+          <ComposedComponent
+            getFillStyle={this.getFillStyle}
+            getBorderStyle={this.getBorderStyle}
+            style={indicatorStyle}
+          />
+        </div>
       );
     }
   }
