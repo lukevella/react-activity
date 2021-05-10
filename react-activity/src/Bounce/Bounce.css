@@ -1,0 +1,32 @@
+@keyframes bounce-pulse {
+  0% {
+    transform: translateY(0.1875em);
+  }
+  30% {
+    transform: translateY(-0.25em);
+  }
+  50% {
+    transform: translateY(0.1875em);
+  }
+}
+
+.rai-bounce {
+  display: inline-block;
+  line-height: 0;
+  & > div {
+    transform: translateY(0.1875em);
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 0.1875em;
+    background-color: currentColor;
+    width: 0.5em;
+    height: 0.5em;
+    animation-name: bounce-pulse;
+    animation-duration: inherit;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

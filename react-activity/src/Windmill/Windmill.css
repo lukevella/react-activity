@@ -1,0 +1,29 @@
+@keyframes windmill-pulse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(356deg);
+  }
+}
+
+.rai-windmill {
+  width: 1em;
+  height: 1em;
+  position: relative;
+  animation-name: windmill-pulse;
+  animation-duration: inherit;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  &:after {
+    content: "";
+    background: currentColor;
+    border-radius: 0.125em;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -0.0625em;
+    width: 0.125em;
+    height: 100%;
+  }
+}

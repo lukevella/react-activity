@@ -9,46 +9,38 @@ A library of activity indicators in the form of React components.
 
 ## Demo & Examples
 
-Live demo: http://labs.lukevella.com/react-activity
+Live demo: https://react-activity.lukevella.com
 
 To run the examples locally, run:
 
 ```bash
-npm install
-npm start
+yarn && yarn start
 ```
 
-Then open `localhost:8000` in your browser.
+Then open [http://localhost:8000](http://localhost:8000) in your browser.
 
 ## Install
-
-```
-npm install react-activity
-```
 
 React, ReactDOM are peer dependencies, if you haven't already installed them use:
 
 ```
-npm install react react-dom
+npm install react-activity react react-dom
 ```
 
 ## Getting Started
 
 Import the activity indicators you would like to use along with the css file. Use the activity indicator component like you would any other component.
 
-```js
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import { Dots } from 'react-activity';
-import 'react-activity/dist/react-activity.css';
+```jsx
+import React from "react";
+import { render } from "react-dom";
+import { Dots } from "react-activity";
 
-class App extends Component {
-  render() {
-    return <Dots />;
-  }
-}
+const App = () => {
+  return <Dots />;
+};
 
-render(<App />, document.getElementById('app-container'))
+render(<App />, document.getElementById("app-container"));
 ```
 
 ## Optimizing Your Build
@@ -57,39 +49,36 @@ To avoid bundling unnecessary code and css to your project, you can import the
 activity indicators individually.
 
 ```js
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import Dots from 'react-activity/lib/Dots';
-import 'react-activity/lib/Dots/Dots.css';
+import React, { Component } from "react";
+import { render } from "react-dom";
+import Dots from "react-activity/dist/Dots";
 
-class App extends Component {
-  render() {
-    return <Dots />;
-  }
+const App => () => {
+  return <Dots />
 }
 
-render(<App />, document.getElementById('app-container'))
+render(<App />, document.getElementById("app-container"));
 ```
 
 ## Activity Indicators
 
-* `Dots`
-* `Levels`
-* `Sentry`
-* `Spinner`
-* `Squares`
-* `Digital`
-* `Bounce`
-* `Windmill`
+- `Dots`
+- `Levels`
+- `Sentry`
+- `Spinner`
+- `Squares`
+- `Digital`
+- `Bounce`
+- `Windmill`
 
 ## Properties
 
-* `size: number` All dimensions of the activity indicators are
-specified in ems so play around with a value until you find something that
-suits your needs.
-* `color: string` The active color of the indicator.
-* `speed: number (Default: 1)` The relative animation speed of the indicator.
-* `animating: boolean (Default: true)` Whether to show the indicator (true) or hide it (false).
+- `size: number` All dimensions of the activity indicators are
+  specified in ems so play around with a value until you find something that
+  suits your needs.
+- `color: string` The active color of the indicator.
+- `speed: number (Default: 1)` The relative animation speed of the indicator.
+- `animating: boolean (Default: true)` Whether to show the indicator (true) or hide it (false).
 
 ## License
 

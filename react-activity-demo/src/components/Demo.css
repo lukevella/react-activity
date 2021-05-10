@@ -1,0 +1,87 @@
+.indicators {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px;
+  & .indicator {
+    display: flex;
+    flex-basis: 25%;
+    background: #0e3b8c;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    text-align: center;
+    height: 120px;
+    position: relative;
+    padding-bottom: 20px;
+    transition: all 0.1s linear;
+    cursor: pointer;
+    &.active {
+      width: 100%;
+    }
+    &.active,
+    &:hover {
+      background: #0e3784;
+    }
+    &.selected {
+      background: #345eaa;
+    }
+    & .label {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      font-size: 12px;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+  }
+}
+
+.demo-container {
+  display: flex;
+  background: #fff;
+  padding: 30px 0 30px 30px;
+}
+.demo-options {
+  margin-right: 20px;
+  min-width: 180px;
+}
+.demo-option {
+  margin-bottom: 10px;
+  & > label {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    color: #aaa;
+    display: block;
+    &::after {
+      content: ":";
+    }
+  }
+  & > input {
+    display: block;
+    border-radius: 1px;
+    padding: 8px;
+    font-size: 14px;
+    color: #333;
+    outline: 0;
+    border: 1px solid #ddd;
+    &:focus {
+      border-color: var(--primary-color);
+    }
+  }
+}
+.demo-output {
+  flex-grow: 1;
+}
+
+.canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  background: #ecf0f7;
+}

@@ -1,9 +1,5 @@
 language: node_js
 node_js:
-  - "8"
-branches:
-  only:
-  - gh-pages
-  - /.*/
+  - "14"
 notifications:
   email: me@lukevella.com

@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+
+:root {
+  --primary-color: #10419b;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+  color: #fff;
+  background: var(--primary-color);
+}
+
+a {
+  color: tint(var(--primary-color), 80%);
+  text-decoration: none;
+  &:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+b {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+pre {
+  display: block;
+  background: #08214e;
+  font-family: "Droid Sans Mono", monospace;
+  font-size: 14px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  white-space: pre;
+  color: #fff;
+  line-height: 1.5em;
+  tab-size: 2;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.app-container {
+  margin: 80px auto;
+  padding: 0 40px;
+  max-width: 1024px;
+  min-width: 880px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header-title {
+  flex-grow: 1;
+}
+
+.header-links {
+  font-size: 14px;
+  & > a {
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    &:hover {
+      background: #fff;
+      border-color: #fff;
+      color: var(--primary-color);
+    }
+  }
+}
+
+.credit {
+  font-size: 14px;
+  margin: 40px 0;
+  text-align: center;
+  & .credit-text {
+    line-height: 1.5em;
+    margin-top: 10px;
+  }
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  vertical-align: middle;
+}
