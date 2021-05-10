@@ -5,6 +5,11 @@
 
 A library of activity indicators in the form of React components.
 
+- 🔥 8 different animations to choose from
+- 🎨 Customizable color, size and animation speed
+- 🕺 Small footprint. Only ~7kB if you [add a single component](#optimizing-your-build) to your bundle.
+- 🆕 TypeScript support
+
 ![preview](https://user-images.githubusercontent.com/676849/37826344-579320d0-2e93-11e8-8f01-faa09385bf64.gif)
 
 ## Demo & Examples
