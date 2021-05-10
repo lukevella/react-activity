@@ -5,7 +5,7 @@ import ActivityIndicator from "../shared/ActivityIndicator";
 import { ReactActivityIndicatorProps } from "../types";
 import { getRelativeTime } from "../shared/getRelativeTime";
 
-const Sentry: React.FunctionComponent<ReactActivityIndicatorProps> = ({
+const Sentry: React.VoidFunctionComponent<ReactActivityIndicatorProps> = ({
   speed = 1,
   ...rest
 }) => {

@@ -5,7 +5,7 @@ import ActivityIndicator from "../shared/ActivityIndicator";
 import { ReactActivityIndicatorProps } from "../types";
 import { getRelativeTime } from "../shared/getRelativeTime";
 
-const Dots: React.FunctionComponent<ReactActivityIndicatorProps> = ({
+const Dots: React.VoidFunctionComponent<ReactActivityIndicatorProps> = ({
   speed = 1,
   ...rest
 }) => {

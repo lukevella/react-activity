@@ -4,7 +4,7 @@ import * as React from "react";
 import { ReactActivityIndicatorProps } from "../types";
 import ActivityIndicator from "../shared/ActivityIndicator";
 
-const Spinner: React.FunctionComponent<ReactActivityIndicatorProps> = (
+const Spinner: React.VoidFunctionComponent<ReactActivityIndicatorProps> = (
   props
 ) => {
   return (

@@ -4,7 +4,7 @@ import * as React from "react";
 import ActivityIndicator from "../shared/ActivityIndicator";
 import { ReactActivityIndicatorProps } from "../types";
 
-const Squares: React.FunctionComponent<ReactActivityIndicatorProps> = (
+const Squares: React.VoidFunctionComponent<ReactActivityIndicatorProps> = (
   props
 ) => {
   const squares: React.ReactElement[] = [];
