@@ -53,7 +53,7 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import Dots from "react-activity/dist/Dots";
 
-const App => () => {
+const App = () => {
   return <Dots />
 }
 
