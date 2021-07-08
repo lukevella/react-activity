@@ -24,6 +24,7 @@ module.exports = {
     libraryTarget: "umd",
     umdNamedDefine: true,
     path: path.resolve(__dirname, "dist"),
+    globalObject: "this",
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
