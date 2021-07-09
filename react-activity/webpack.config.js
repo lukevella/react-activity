@@ -1,4 +1,5 @@
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
@@ -20,20 +21,23 @@ module.exports = {
   },
   output: {
     filename: "[name]/index.js",
-    library: "ReactActivity",
-    libraryTarget: "umd",
-    umdNamedDefine: true,
-    path: path.resolve(__dirname, "dist"),
+    library: {
+      name: "ReactActivity",
+      type: "umd",
+      umdNamedDefine: true,
+    },
     globalObject: "this",
+    path: path.resolve(__dirname, "dist"),
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
   },
+  plugins: [new MiniCssExtractPlugin()],
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
       {
         test: /\.tsx?$/,

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.0
+
+- Moved away from using style-loader to support apps using server-side rendering. CSS files now need to be imported separately.
+
 ## 2.0.0
 
 ### Added

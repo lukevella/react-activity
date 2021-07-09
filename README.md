@@ -34,12 +34,14 @@ npm install react-activity react react-dom
 
 ## Getting Started
 
-Import the activity indicators you would like to use along with the css file. Use the activity indicator component like you would any other component.
+Import the activity indicators you would like to use along with its corresponding css file.
 
 ```jsx
 import React from "react";
 import { render } from "react-dom";
+
 import { Dots } from "react-activity";
+import "react-activity/dist/Dots.css";
 
 const App = () => {
   return <Dots />;
@@ -56,11 +58,13 @@ activity indicators individually.
 ```js
 import React, { Component } from "react";
 import { render } from "react-dom";
+
 import Dots from "react-activity/dist/Dots";
+import "react-activity/dist/Dots.css";
 
 const App = () => {
-  return <Dots />
-}
+  return <Dots />;
+};
 
 render(<App />, document.getElementById("app-container"));
 ```
