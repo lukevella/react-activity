@@ -1,4 +1,5 @@
 import "./Demo.css";
+import "react-activity/dist/library.css";
 
 import React from "react";
 import {
