@@ -33,7 +33,7 @@ import React from "react";
 import { render } from "react-dom";
 
 import { Dots } from "react-activity";
-import "react-activity/dist/Dots.css";
+import "react-activity/dist/library.css";
 
 const App = () => {
   return <Dots />;
