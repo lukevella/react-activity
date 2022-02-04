@@ -4,7 +4,7 @@ import { getRelativeTime } from "../getRelativeTime";
 
 interface ActivityIndicatorProps extends ReactActivityIndicatorProps {
   defaultAnimationDuration: number;
-  className?: string;
+  indicatorClassName?: string;
   children?: React.ReactNode;
 }
 
@@ -17,6 +17,7 @@ const ActivityIndicator: React.VoidFunctionComponent<ActivityIndicatorProps> = (
   className,
   animating = true,
   children,
+  indicatorClassName,
 }) => {
   if (!animating) {
     return null;
@@ -26,7 +27,9 @@ const ActivityIndicator: React.VoidFunctionComponent<ActivityIndicatorProps> = (
   return (
     <div
       data-testid="rai-activity-indicator"
-      className={`rai-container ${className}`}
+      className={`rai-container ${indicatorClassName}${
+        className ? ` ${className}` : ""
+      }`}
       style={{
         color,
         fontSize: `${size}px`,

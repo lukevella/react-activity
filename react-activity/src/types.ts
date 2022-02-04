@@ -6,4 +6,5 @@ export interface ReactActivityIndicatorProps {
   animating?: boolean;
   speed?: number;
   size?: number;
+  className?: string;
 }

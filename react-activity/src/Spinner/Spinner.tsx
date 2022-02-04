@@ -9,7 +9,7 @@ const Spinner: React.VoidFunctionComponent<ReactActivityIndicatorProps> = (
 ) => {
   return (
     <ActivityIndicator
-      className="rai-spinner"
+      indicatorClassName="rai-spinner"
       defaultAnimationDuration={0.6}
       {...props}
     >

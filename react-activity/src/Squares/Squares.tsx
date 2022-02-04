@@ -19,7 +19,7 @@ const Squares: React.VoidFunctionComponent<ReactActivityIndicatorProps> = (
   }
   return (
     <ActivityIndicator
-      className="rai-squares"
+      indicatorClassName="rai-squares"
       defaultAnimationDuration={0.8}
       {...props}
     >

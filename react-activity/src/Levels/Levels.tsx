@@ -11,7 +11,7 @@ const Levels: React.VoidFunctionComponent<ReactActivityIndicatorProps> = ({
 }) => {
   return (
     <ActivityIndicator
-      className="rai-levels"
+      indicatorClassName="rai-levels"
       speed={speed}
       defaultAnimationDuration={1.5}
       {...rest}

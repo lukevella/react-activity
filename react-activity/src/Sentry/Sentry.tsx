@@ -11,7 +11,7 @@ const Sentry: React.VoidFunctionComponent<ReactActivityIndicatorProps> = ({
 }) => {
   return (
     <ActivityIndicator
-      className="rai-sentry"
+      indicatorClassName="rai-sentry"
       speed={speed}
       defaultAnimationDuration={0.8}
       {...rest}

@@ -23,7 +23,7 @@ const Digital: React.VoidFunctionComponent<ReactActivityIndicatorProps> = ({
 
   return (
     <ActivityIndicator
-      className="rai-digital"
+      indicatorClassName="rai-digital"
       defaultAnimationDuration={0.8}
       speed={speed}
       {...rest}

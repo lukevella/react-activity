@@ -9,7 +9,7 @@ const Windmill: React.VoidFunctionComponent<ReactActivityIndicatorProps> = (
 ) => {
   return (
     <ActivityIndicator
-      className="rai-windmill"
+      indicatorClassName="rai-windmill"
       defaultAnimationDuration={0.8}
       {...props}
     />

@@ -80,14 +80,18 @@ render(<App />, document.getElementById("app-container"));
 - `Bounce`
 - `Windmill`
 
-## Properties
+## Props
+
+All indicators support the following props:
 
 - `size: number` All dimensions of the activity indicators are
   specified in ems so play around with a value until you find something that
   suits your needs.
 - `color: string` The active color of the indicator.
-- `speed: number (Default: 1)` The relative animation speed of the indicator.
-- `animating: boolean (Default: true)` Whether to show the indicator (true) or hide it (false).
+- `speed: number (default: 1)` The relative animation speed of the indicator.
+- `animating: boolean (default: true)` Whether to show the indicator (true) or hide it (false).
+- `style: React.CSSProperties (default: undefined)` Custom styling to be applied to the container.
+- `className: string (default: undefined)` Custom className to be applied to the container.
 
 ## License
 

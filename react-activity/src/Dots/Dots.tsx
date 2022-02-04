@@ -11,7 +11,7 @@ const Dots: React.VoidFunctionComponent<ReactActivityIndicatorProps> = ({
 }) => {
   return (
     <ActivityIndicator
-      className="rai-dots"
+      indicatorClassName="rai-dots"
       speed={speed}
       defaultAnimationDuration={0.8}
       {...rest}
